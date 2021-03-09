@@ -1,25 +1,37 @@
-" Vim Plug-In Manager
-call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-sensible'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-commentary'
-Plug 'thoughtbot/vim-rspec'
-Plug 'tpope/vim-dispatch'
-Plug 'altercation/vim-colors-solarized'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'christoomey/vim-tmux-runner'
-Plug 'shougo/neocomplete.vim'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'gabrielelana/vim-markdown'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'tpope/vim-obsession'
-Plug 'rust-lang/rust.vim'
+" Minimal Configuration
+set nocompatible
+filetype plugin indent on
 
-call plug#end()
+" Minpac Load and Initialize
+" More info: https://github.com/k-takata/minpac
+packadd minpac
+call minpac#init()
+
+" Minpac Commands
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
+
+" Plugins
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('tpope/vim-commentary')
+
+" Plug 'tpope/vim-sensible'
+" Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-repeat'
+" Plug 'thoughtbot/vim-rspec'
+" Plug 'tpope/vim-dispatch'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'christoomey/vim-tmux-navigator'
+" Plug 'christoomey/vim-tmux-runner'
+" Plug 'shougo/neocomplete.vim'
+" Plug 'cakebaker/scss-syntax.vim'
+" Plug 'gabrielelana/vim-markdown'
+" Plug 'mustache/vim-mustache-handlebars'
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+" Plug 'tpope/vim-obsession'
+" Plug 'rust-lang/rust.vim'
 
 let g:jsx_ext_required = 0
 
@@ -29,7 +41,6 @@ let mapleader = "\<Space>"
 set number		 " Turn on line numbers.
 set relativenumber
 set numberwidth=5 
-set nocompatible	 " Don't maintain compatability with Vi.
 set hidden		 " Allow buffer change w/saving.
 set lazyredraw		 " Don't update with executing macros.
 set scrolloff=4		 " Keep at least 4 lines below cursor.
@@ -90,8 +101,8 @@ let g:ctrlp_use_caching = 0
 syntax enable
 
 set background=light
-let g:solarized_termcolors=16
-colorscheme solarized
+" let g:solarized_termcolors=16
+" colorscheme solarized
 
 " Automatically rebalance windows on Vim resize.
 autocmd VimResized * :wincmd =
