@@ -2,8 +2,10 @@
 set nocompatible
 filetype plugin indent on
 
+" Leader
+let mapleader = "\<Space>"
+
 " Minpac Load and Initialize
-" More info: https://github.com/k-takata/minpac
 packadd minpac
 call minpac#init()
 
@@ -11,9 +13,23 @@ call minpac#init()
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 
-" Plugins
+" Plugins (A-Z)
+call minpac#add('altercation/vim-colors-solarized')
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-commentary')
+call minpac#add('takac/vim-hardtime')
+
+" Solarized
+syntax enable " TODO: Move this somewhere else, maybe?
+set background=dark
+colorscheme solarized
+
+" Hardtime (`:HardTimeToggle`)
+" Live It: https://tylercipriani.com/vim.html
+let g:hardtime_default_on = 1
+let g:hardtime_ignore_quickfix = 1
+
+"***** ^^^ This is the good stuff! ^^^ *****
 
 " Plug 'tpope/vim-sensible'
 " Plug 'ctrlpvim/ctrlp.vim'
@@ -29,18 +45,15 @@ call minpac#add('tpope/vim-commentary')
 " Plug 'gabrielelana/vim-markdown'
 " Plug 'mustache/vim-mustache-handlebars'
 " Plug 'pangloss/vim-javascript'
-" Plug 'mxw/vim-jsx'
 " Plug 'tpope/vim-obsession'
 " Plug 'rust-lang/rust.vim'
 
-let g:jsx_ext_required = 0
 
-" Use the space key as the leader key.
-let mapleader = "\<Space>"
-
-set number		 " Turn on line numbers.
+" Line Numbers
+set number
 set relativenumber
-set numberwidth=5 
+set numberwidth=5
+
 set hidden		 " Allow buffer change w/saving.
 set lazyredraw		 " Don't update with executing macros.
 set scrolloff=4		 " Keep at least 4 lines below cursor.
@@ -48,7 +61,6 @@ set noswapfile		 " No swap file.
 set ignorecase
 set smartcase
 set spell
-syntax on		 " Turn on syntax highlighing.
 
 " Softtabs, 2 spaces
 set tabstop=2
@@ -98,11 +110,6 @@ map <Leader>a :call RunAllSpecs()<CR>
 let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
-syntax enable
-
-set background=light
-" let g:solarized_termcolors=16
-" colorscheme solarized
 
 " Automatically rebalance windows on Vim resize.
 autocmd VimResized * :wincmd =
