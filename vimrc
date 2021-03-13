@@ -1,6 +1,10 @@
 " Minimal Configuration
-set nocompatible
+set nocompatible  " Allow Vim features
+set hidden        " Allow buffer change w/saving.
 filetype plugin indent on
+
+" Extra Settings
+set colorcolumn=80 " Indicate guideline for maximum width
 
 " Leader
 let mapleader = "\<Space>"
@@ -19,7 +23,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-commentary')
 call minpac#add('takac/vim-hardtime')
 
-" Solarized
+" Solarized & Syntax
 syntax enable " TODO: Move this somewhere else, maybe?
 set background=dark
 colorscheme solarized
@@ -28,6 +32,9 @@ colorscheme solarized
 " Live It: https://tylercipriani.com/vim.html
 let g:hardtime_default_on = 1
 let g:hardtime_ignore_quickfix = 1
+
+" Leader Mappings
+:nnoremap <Leader>b :ls<CR>:buffer<Space>   " List buffers and prompt for selection.
 
 "***** ^^^ This is the good stuff! ^^^ *****
 
@@ -52,9 +59,8 @@ let g:hardtime_ignore_quickfix = 1
 " Line Numbers
 set number
 set relativenumber
-set numberwidth=5
+set numberwidth=4
 
-set hidden		 " Allow buffer change w/saving.
 set lazyredraw		 " Don't update with executing macros.
 set scrolloff=4		 " Keep at least 4 lines below cursor.
 set noswapfile		 " No swap file.
@@ -71,9 +77,6 @@ set expandtab
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
-" Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
 
 " Better indenting for wrapped lines.
 set breakindent
