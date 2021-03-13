@@ -3,8 +3,17 @@ set nocompatible  " Allow Vim features
 set hidden        " Allow buffer change w/saving.
 filetype plugin indent on
 
-" Extra Settings
-set colorcolumn=80 " Indicate guideline for maximum width
+" Settings
+set colorcolumn=80                      " Show guideline for maximum width
+set directory^=$HOME/.vim/vimswap//     " Set swap file director
+set hlsearch                            " Highlight all search results
+set ignorecase                          " Ignore case when searching
+set incsearch                           " Show search results while typing
+set number                              " Show line numbers
+set numberwidth=4                       " Set the number column width
+set relativenumber                      " Relative line numbers
+syntax enable                           " Highlight syntax
+
 
 " Leader
 let mapleader = "\<Space>"
@@ -24,7 +33,6 @@ call minpac#add('tpope/vim-commentary')
 call minpac#add('takac/vim-hardtime')
 
 " Solarized & Syntax
-syntax enable " TODO: Move this somewhere else, maybe?
 set background=dark
 colorscheme solarized
 
@@ -56,62 +64,55 @@ let g:hardtime_ignore_quickfix = 1
 " Plug 'rust-lang/rust.vim'
 
 
-" Line Numbers
-set number
-set relativenumber
-set numberwidth=4
+" set lazyredraw		 " Don't update with executing macros.
+" set scrolloff=4		 " Keep at least 4 lines below cursor.
+" set smartcase
+" set spell
 
-set lazyredraw		 " Don't update with executing macros.
-set scrolloff=4		 " Keep at least 4 lines below cursor.
-set noswapfile		 " No swap file.
-set ignorecase
-set smartcase
-set spell
-
-" Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
-set shiftround
-set expandtab
+" " Softtabs, 2 spaces
+" set tabstop=2
+" set shiftwidth=2
+" set shiftround
+" set expandtab
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+" set list listchars=tab:»·,trail:·,nbsp:·
 
 
 " Better indenting for wrapped lines.
-set breakindent
+" set breakindent
 " set breakindentopt Optional settings.  See help breakindentopt
 
-set splitbelow
-set splitright
+" set splitbelow
+" set splitright
 
-nmap <leader>vr :sp $MYVIMRC<cr> " Split edit vimrc.
-nmap <leader>so :source $MYVIMRC<cr> " Source (reload) vimrc.
-nmap <leader>w :w<cr>
+" nmap <leader>vr :sp $MYVIMRC<cr> " Split edit vimrc.
+" nmap <leader>so :source $MYVIMRC<cr> " Source (reload) vimrc.
+" nmap <leader>w :w<cr>
 " nmap <leader>co ggVG*y " Copy the entire buffer into the system register.
 
-nmap <leader>ff :!rspec --fail-fast<cr>
-nmap <leader>rs :!rspec<cr>
-nmap <leader>jn :!jasmine-node . <cr>
-nmap <leader>tm :shell <cr>
-nmap <leader>ln :!learn<cr>
-nmap <leader>p "+p
-" nmap <leader>co "+y
+" nmap <leader>ff :!rspec --fail-fast<cr>
+" nmap <leader>rs :!rspec<cr>
+" nmap <leader>jn :!jasmine-node . <cr>
+" nmap <leader>tm :shell <cr>
+" nmap <leader>ln :!learn<cr>
+" nmap <leader>p "+p
+" " nmap <leader>co "+y
 
-imap jk <esc>
-imap kj <esc>
-"imap <C-s> <esc>:w<cr>
+"imap jk <esc>
+"imap kj <esc>
+""imap <C-s> <esc>:w<cr>
 
-" RSpec.vim mappings
-let g:rspec_command = "VtrSendCommandToRunner! rspec {spec}"
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+" " RSpec.vim mappings
+" let g:rspec_command = "VtrSendCommandToRunner! rspec {spec}"
+" map <Leader>t :call RunCurrentSpecFile()<CR>
+" map <Leader>s :call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
 
-" Make CtrlP use ag for listing the files.
-let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-let g:ctrlp_use_caching = 0
+" " Make CtrlP use ag for listing the files.
+" let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+" let g:ctrlp_use_caching = 0
 
 
 " Automatically rebalance windows on Vim resize.
