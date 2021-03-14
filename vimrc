@@ -28,6 +28,7 @@ command! PackClean call minpac#clean()
 
 " Plugins (A-Z)
 call minpac#add('altercation/vim-colors-solarized')
+call minpac#add('junegunn/fzf')
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('takac/vim-hardtime')
 call minpac#add('tpope/vim-commentary')
@@ -42,7 +43,10 @@ let g:hardtime_default_on = 1
 let g:hardtime_ignore_quickfix = 1
 
 " Leader Mappings
-:nnoremap <Leader>b :ls<CR>:buffer<Space>   " List buffers and prompt for selection.
+nnoremap <Leader>b :ls<CR>:buffer<Space>   " List buffers and prompt for selection.
+
+" Mappings
+nnoremap <C-p> :<C-u>FZF<CR>
 
 "***** ^^^ This is the good stuff! ^^^ *****
 
