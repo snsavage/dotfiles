@@ -1,6 +1,6 @@
 " Minimal Configuration
 set nocompatible  " Allow Vim features
-set hidden        " Allow buffer change w/saving.
+set hidden        " Allow buffer change w/o saving.
 filetype plugin indent on
 
 " Settings
@@ -29,8 +29,8 @@ command! PackClean call minpac#clean()
 " Plugins (A-Z)
 call minpac#add('altercation/vim-colors-solarized')
 call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('tpope/vim-commentary')
 call minpac#add('takac/vim-hardtime')
+call minpac#add('tpope/vim-commentary')
 
 " Solarized & Syntax
 set background=dark
