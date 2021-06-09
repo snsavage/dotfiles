@@ -7,3 +7,6 @@
 - link:
     ~/.vimrc: vimrc
     ~/.starship.toml: starship.toml
+
+- shell:
+  - export STARSHIP_CONFIG=~/.starship.toml
