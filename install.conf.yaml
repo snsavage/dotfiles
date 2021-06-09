@@ -6,3 +6,4 @@
 
 - link:
     ~/.vimrc: vimrc
+    ~/.starship.toml: starship.toml
