@@ -39,8 +39,8 @@ colorscheme solarized
 
 " Hardtime (`:HardTimeToggle`)
 " Live It: https://tylercipriani.com/vim.html
-let g:hardtime_default_on = 1
-let g:hardtime_ignore_quickfix = 1
+" let g:hardtime_default_on = 1
+" let g:hardtime_ignore_quickfix = 1
 
 " Leader Mappings
 nnoremap <Leader>b :ls<CR>:buffer<Space>   " List buffers and prompt for selection.
