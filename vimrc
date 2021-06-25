@@ -17,6 +17,8 @@ syntax enable                           " Highlight syntax
 
 " Leader
 let mapleader = "\<Space>"
+nnoremap <Leader>r :!./%<CR>
+
 
 " Minpac Load and Initialize
 packadd minpac
@@ -74,14 +76,13 @@ nnoremap <C-p> :<C-u>FZF<CR>
 " set spell
 
 " " Softtabs, 2 spaces
-" set tabstop=2
-" set shiftwidth=2
-" set shiftround
-" set expandtab
+set tabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
 
 " Display extra whitespace
-" set list listchars=tab:»·,trail:·,nbsp:·
-
+set list listchars=tab:»·,trail:·,nbsp:·
 
 " Better indenting for wrapped lines.
 " set breakindent
@@ -90,9 +91,9 @@ nnoremap <C-p> :<C-u>FZF<CR>
 " set splitbelow
 " set splitright
 
-" nmap <leader>vr :sp $MYVIMRC<cr> " Split edit vimrc.
-" nmap <leader>so :source $MYVIMRC<cr> " Source (reload) vimrc.
-" nmap <leader>w :w<cr>
+nmap <leader>vr :sp $MYVIMRC<cr> " Split edit vimrc.
+nmap <leader>so :source $MYVIMRC<cr> " Source (reload) vimrc.
+nmap <leader>w :w<cr>
 " nmap <leader>co ggVG*y " Copy the entire buffer into the system register.
 
 " nmap <leader>ff :!rspec --fail-fast<cr>
