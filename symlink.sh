@@ -8,18 +8,6 @@ echo "Symlink Utility"
 source_path=$1
 link_path=$2
 
-# if [ -L ${my_link} ] ; then
-#    if [ -e ${my_link} ] ; then
-#       echo "Good link"
-#    else
-#       echo "Broken link"
-#    fi
-# elif [ -e ${my_link} ] ; then
-#    echo "Not a link"
-# else
-#    echo "Missing"
-# fi
-
 # Check for file.
 if [ ! -e "$source_path" ] ; then
     echo "$source_path not found"
@@ -28,32 +16,31 @@ else
     echo "$source_path found"
 fi
 
-# Check for symlink/
-if [ -L "$link_path" ] ; then
-    echo "Symlink already exists for $link_path"
-    # exit 1
-else
-    echo "No symlink found for $link_path"
+
+# Test if the link is there and working.
+if [ -L ${link_path} ] && [ -e ${link_path} ] ; then
+    echo "Good link"
+    exit 0
 fi
 
-# Check that symlink links to file.
-
-test="~/dotfiles/$source_path"
-echo $test
-echo "readlink " "$(readlink $test)"
-echo "link_path " "$link_path"
-if [ "$(readlink $link_path)" = $source_path ] ; then
-    echo "a match"
-else
-    echo "no match"
+# Test if the link is there, but broken.
+if [ -L ${link_path} ] && [ ! -e ${link_path} ] ; then
+    echo "Broken link"
+    # Fix the link and retest.
+    # Retest the link.
+    # Exit 0 if the link is good.
+    exit 1
 fi
 
+if [ -e ${link_path} ] ; then
+    echo "Not a link"
+    # Move the existing file and create the link.
+    exit 1
+fi
 
-# If symlink existings but points somewhere else...
+if [ ! -e ${link_path} ] ; then
+    echo "Missing"
+    # Create the link.
+    exit 1
+fi
 
-# If no symlink
-# Check for file instead of symlink.
-# Move file to old files folder.
-# Create symlink.
-
-# Should this be reversable?
