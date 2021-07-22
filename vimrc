@@ -4,6 +4,7 @@ set hidden        " Allow buffer change w/o saving.
 filetype plugin indent on
 
 " Settings
+set belloff=all                         " Turn off all visual and audio bells
 set colorcolumn=80                      " Show guideline for maximum width
 set directory^=$HOME/.vim/vimswap//     " Set swap file director
 set hlsearch                            " Highlight all search results
