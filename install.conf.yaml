@@ -1,0 +1,20 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.starship.toml: starship.toml
+
+- shell:
+  -
+    description: Clone minpac for Vim
+    command: git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
+    stdin: false
+    stout: true
+    quiet: false
+  - defaults write com.apple.Finder AppleShowAllFiles true
+  - export STARSHIP_CONFIG=~/.starship.toml
+
