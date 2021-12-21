@@ -16,5 +16,4 @@
     stout: true
     quiet: false
   - defaults write com.apple.Finder AppleShowAllFiles true
-  - export STARSHIP_CONFIG=~/.starship.toml
 

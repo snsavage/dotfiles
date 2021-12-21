@@ -1,2 +1,6 @@
 [aws]
-disabled = true
+    disabled = true
+[kubernetes]
+    disabled = false
+[username]
+    show_always = true

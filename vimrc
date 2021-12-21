@@ -20,8 +20,6 @@ syntax enable                           " Highlight syntax
 
 " Leader
 let mapleader = "\<Space>"
-nnoremap <Leader>r :!./%<CR>
-
 
 " Minpac Load and Initialize
 packadd minpac
