@@ -31,6 +31,8 @@ command! PackClean call minpac#clean()
 
 " Plugins (A-Z)
 call minpac#add('altercation/vim-colors-solarized')
+call minpac#add('ekalinin/Dockerfile.vim')
+call minpac#add('fatih/vim-go', { 'do': ':GoUpdateBinaries' })
 call minpac#add('junegunn/fzf')
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('takac/vim-hardtime')
@@ -50,6 +52,10 @@ nnoremap <Leader>b :ls<CR>:buffer<Space>   " List buffers and prompt for selecti
 
 " Mappings
 nnoremap <C-p> :<C-u>FZF<CR>
+
+" Vim Go
+let g:go_fmt_command = "goimports"
+let g:go_metalinter_autosave = 1
 
 "***** ^^^ This is the good stuff! ^^^ *****
 
