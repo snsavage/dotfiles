@@ -5,8 +5,9 @@
 - clean: ['~']
 
 - link:
-    ~/.vimrc: vimrc
     ~/.starship.toml: starship.toml
+    ~/.vimrc: vimrc
+
 
 - shell:
   -
