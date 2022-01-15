@@ -11,7 +11,8 @@
     ~/.gitignore: gitignore
     ~/.starship.toml: starship.toml
     ~/.vimrc: vimrc
-
+    ~/.zprofile: zprofile
+    ~/.zshrc: zshrc
 
 # - shell:
 #   -
