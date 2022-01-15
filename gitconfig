@@ -1,0 +1,7 @@
+[alias]
+	l = "!. ~/.githelpers && pretty_git_log"
+[user]
+	name = Scott Savage
+	email = snsavage@gmail.com
+[core]
+	excludesfile = /Users/snsavage/.gitignore
