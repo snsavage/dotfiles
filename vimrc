@@ -13,6 +13,8 @@ set incsearch                           " Show search results while typing
 set number                              " Show line numbers
 set numberwidth=4                       " Set the number column width
 set relativenumber                      " Relative line numbers
+set splitbelow                          " Split new buffers below
+set splitright                          " Split new vertifcal buffers right
 set tabstop=4
 
 syntax enable                           " Highlight syntax
