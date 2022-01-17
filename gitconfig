@@ -3,7 +3,10 @@
 
 [core]
 	excludesfile = /Users/snsavage/.gitignore
+	editor = vim
 
 [include]
     path = ~/.gitconfig_local
 
+[init]
+	defaultBranch = main
