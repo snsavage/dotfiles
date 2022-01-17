@@ -5,7 +5,6 @@
 - clean: ['~']
 
 - link:
-    # TODO: Remove user config.
     ~/.gitconfig: gitconfig
     ~/.githelpers: githelpers
     ~/.gitignore: gitignore
@@ -13,6 +12,14 @@
     ~/.vimrc: vimrc
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
+
+- shell:
+  -
+    command: ./git_config_setup.sh
+    description: "Ensure that git user name and email are configured"
+    stderr: true
+    stdin: true
+    stdout: true
 
 # - shell:
 #   -
