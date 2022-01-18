@@ -8,12 +8,11 @@ tap "homebrew/core"
 cask "font-hack"
 cask "font-hack-nerd-font"
 cask "iterm2"
-
-# Shell Configuration
 brew "starship"
 
 # Tools
 brew "awscli"
+brew "asdf"
 
 # Utilities
 brew "coreutils"
