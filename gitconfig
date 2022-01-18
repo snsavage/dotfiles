@@ -2,8 +2,8 @@
 	l = "!. ~/.githelpers && pretty_git_log"
 
 [core]
-	excludesfile = /Users/snsavage/.gitignore
 	editor = vim
+	excludesFile = ~/.gitignore
 
 [include]
     path = ~/.gitconfig_local
