@@ -12,6 +12,9 @@ cask "iterm2"
 # Shell Configuration
 brew "starship"
 
+# Tools
+brew "awscli"
+
 # Utilities
 brew "coreutils"
 brew "tree"
