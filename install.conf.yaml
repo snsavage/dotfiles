@@ -4,6 +4,15 @@
 
 - clean: ['~']
 
+- shell:
+  -
+    command: ./homebrew_setup.sh
+    description: "Installs and updates Homebrew.  Installs Brewfile packages."
+    stderr: true
+    stdin: true
+    stdout: true
+
+
 - link:
     ~/.gitconfig: gitconfig
     ~/.githelpers: githelpers

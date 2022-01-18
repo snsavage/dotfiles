@@ -1,9 +1,14 @@
 #!/bin/bash
 
-set -eu
-
 # Checks for git username and email.
 # Prompts user for missing values and sets the config.
+
+set -eu
+echo -e "
+=======================================================================
+                            Git Config
+=======================================================================
+"
 
 echo "Checking Git user configuration."
 
@@ -38,4 +43,5 @@ echo "Git Config for User and Email"
 echo "$(git config user.name)"
 echo "$(git config user.email)"
 
+printf -- '\n';
 exit 0
