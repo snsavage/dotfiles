@@ -1,17 +1,18 @@
 - defaults:
     link:
       relink: true
+    shell:
+      stderr: true
+      stdin: true
+      stdout: true
 
 - clean: ['~']
 
 - shell:
-  -
-    command: ./homebrew_setup.sh
-    description: "Installs and updates Homebrew.  Installs Brewfile packages."
-    stderr: true
-    stdin: true
-    stdout: true
-
+  - ["./scripts/homebrew_setup.sh", "Installs and updates Homebrew.  Installs Brewfile packages."]
+  - ["./scripts/git_config_setup.sh", "Ensure that git user name and email are configured"]
+  - ["defaults write com.apple.Finder AppleShowAllFiles true", "Mac OS - Show all files"]
+  - ["omz update", "Update Oh My Zsh"]
 
 - link:
     ~/.gitconfig: gitconfig
@@ -22,13 +23,14 @@
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
 
-- shell:
-  -
-    command: ./git_config_setup.sh
-    description: "Ensure that git user name and email are configured"
-    stderr: true
-    stdin: true
-    stdout: true
+
+# - shell:
+#   -
+#     command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#     description: "Install Oh My Zsh"
+#     stderr: true
+#     stdin: true
+#     stdout: true
 
 # - shell:
 #   -
@@ -37,5 +39,4 @@
 #     stdin: false
 #     stout: true
 #     quiet: false
-#   - defaults write com.apple.Finder AppleShowAllFiles true
 
