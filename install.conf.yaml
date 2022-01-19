@@ -9,10 +9,10 @@
 - clean: ['~']
 
 - shell:
-  - ["./scripts/homebrew_setup.sh", "Installs and updates Homebrew.  Installs Brewfile packages."]
+  - ["./scripts/homebrew_setup.sh", "Install and update Homebrew.  Install Brewfile packages."]
   - ["./scripts/git_config_setup.sh", "Ensure that git user name and email are configured"]
+  - ["./scripts/oh_my_zsh_setup.sh", "Install and update Oh My Zsh"]
   - ["defaults write com.apple.Finder AppleShowAllFiles true", "Mac OS - Show all files"]
-  - ["omz update", "Update Oh My Zsh"]
 
 - link:
     ~/.gitconfig: gitconfig
