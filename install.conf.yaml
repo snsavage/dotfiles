@@ -19,6 +19,7 @@
     ~/.githelpers: githelpers
     ~/.gitignore: gitignore
     ~/.starship.toml: starship.toml
+    ~/.tool-versions: tool-versions
     ~/.vimrc: vimrc
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc

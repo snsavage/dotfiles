@@ -74,6 +74,9 @@ plugins=(
     asdf
     colored-man-pages
     git
+    helm
+    kubectl
+    terraform
 )
 
 source $ZSH/oh-my-zsh.sh
