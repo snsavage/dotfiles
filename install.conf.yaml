@@ -23,15 +23,6 @@
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
 
-
-# - shell:
-#   -
-#     command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-#     description: "Install Oh My Zsh"
-#     stderr: true
-#     stdin: true
-#     stdout: true
-
 # - shell:
 #   -
 #     description: Clone minpac for Vim
