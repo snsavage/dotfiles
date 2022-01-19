@@ -71,8 +71,8 @@ export ZSH="$HOME/dotfiles/oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    asdf,
-    colored-man-pages,
+    asdf
+    colored-man-pages
     git
 )
 
