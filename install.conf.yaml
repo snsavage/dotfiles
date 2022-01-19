@@ -15,6 +15,7 @@
   - ["defaults write com.apple.Finder AppleShowAllFiles true", "Mac OS - Show all files"]
 
 - link:
+    ~/.asdfrc: asdfrc
     ~/.gitconfig: gitconfig
     ~/.githelpers: githelpers
     ~/.gitignore: gitignore
