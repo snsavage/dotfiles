@@ -16,6 +16,11 @@ brew "awscli"
 brew "asdf"
 brew "coreutils"
 brew "fzf"
+cask "google-cloud-sdk"
+brew "jq"
 brew "tree"
 brew "watch"
+tap "bruceadams/utilities"
+brew "bruceadams/utilities/yj"
+
 
