@@ -3,7 +3,6 @@ export ZSH="$HOME/dotfiles/oh-my-zsh"
 
 plugins=(
     asdf
-    brew
     colored-man-pages
     git
     helm
