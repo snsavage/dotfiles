@@ -15,6 +15,7 @@ brew "starship"
 brew "awscli"
 brew "asdf"
 brew "coreutils"
+brew "fzf"
 brew "tree"
 brew "watch"
 

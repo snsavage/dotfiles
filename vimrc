@@ -1,3 +1,6 @@
+" Plugins
+source ~/dotfiles/vim/plugins.vim
+
 " Minimal Configuration
 set nocompatible  " Allow Vim features
 set hidden        " Allow buffer change w/o saving.
@@ -22,23 +25,6 @@ syntax enable                           " Highlight syntax
 
 " Leader
 let mapleader = "\<Space>"
-
-" Minpac Load and Initialize
-packadd minpac
-call minpac#init()
-
-" Minpac Commands
-command! PackUpdate call minpac#update()
-command! PackClean call minpac#clean()
-
-" Plugins (A-Z)
-call minpac#add('altercation/vim-colors-solarized')
-call minpac#add('ekalinin/Dockerfile.vim')
-call minpac#add('fatih/vim-go', { 'do': ':GoUpdateBinaries' })
-call minpac#add('junegunn/fzf')
-call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('takac/vim-hardtime')
-call minpac#add('tpope/vim-commentary')
 
 " Solarized & Syntax
 set background=dark

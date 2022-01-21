@@ -23,3 +23,5 @@ else
     echo "No local zshrc found."
 fi
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
