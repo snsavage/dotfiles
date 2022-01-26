@@ -18,6 +18,7 @@ call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'airblade/vim-gitgutter'
 Plug 'google/vim-jsonnet'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

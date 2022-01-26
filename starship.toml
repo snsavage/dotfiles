@@ -1,2 +1,9 @@
-[username]
-    show_always = true
+continuation_prompt = "yo!"
+
+[aws]
+    format = 'AWS [$symbol($profile )(\($region\) )(\[$duration\])]($style)'
+
+
+[directory]
+    truncation_symbol = ".../"
+    truncate_to_repo = false
