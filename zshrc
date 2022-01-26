@@ -25,3 +25,6 @@ fi
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Aliases
+alias df="cd ~/dotfiles && vim ."
