@@ -40,6 +40,7 @@ nnoremap <Leader>b :ls<CR>:buffer<Space>   " List buffers and prompt for selecti
 
 " Mappings
 nnoremap <C-p> :<C-u>FZF<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
 
 " Vim Go
 let g:go_fmt_command = "goimports"
