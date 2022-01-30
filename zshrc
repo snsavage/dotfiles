@@ -12,6 +12,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Aliases
+alias df="cd ~/dotfiles && vim ."
+
 # Starship.rs Setup
 export STARSHIP_CONFIG=~/.starship.toml
 eval "$(starship init zsh)"
@@ -23,7 +26,6 @@ else
     echo "No local zshrc found."
 fi
 
-
 # FZF Setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if type rg &> /dev/null; then
@@ -31,5 +33,14 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
-# Aliases
-alias df="cd ~/dotfiles && vim ."
+# Tmux
+_not_inside_tmux() { [[ -z "$TMUX" ]] }
+
+ensure_tmux_is_running() {
+  if _not_inside_tmux; then
+    ~/dotfiles/tmux/tat.sh
+  fi
+}
+
+ensure_tmux_is_running
+
