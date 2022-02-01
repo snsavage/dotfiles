@@ -37,3 +37,5 @@ alias lah="ls -lah"
 
 eval "$(direnv hook zsh)"
 
+# Enable vi mode
+bindkey -v
