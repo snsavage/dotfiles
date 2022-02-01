@@ -10,6 +10,7 @@ cask "font-hack"
 cask "font-hack-nerd-font"
 cask "iterm2"
 brew "starship"
+brew "tmux"
 
 # Tools
 brew "awscli"

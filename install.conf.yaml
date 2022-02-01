@@ -22,6 +22,7 @@
     ~/.gitignore: gitignore
     ~/.rgignore: rgignore
     ~/.starship.toml: starship.toml
+    ~/.tmux.conf: tmux.conf
     ~/.tool-versions: tool-versions
     ~/.vimrc: vimrc
     ~/.zprofile: zprofile
