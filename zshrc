@@ -33,6 +33,7 @@ fi
 
 # Aliases
 alias df="cd ~/dotfiles && vim ."
+alias lah="ls -lah"
 
 eval "$(direnv hook zsh)"
 
