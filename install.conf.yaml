@@ -20,6 +20,7 @@
     ~/.gitconfig: gitconfig
     ~/.githelpers: githelpers
     ~/.gitignore: gitignore
+    ~/.rgignore: rgignore
     ~/.starship.toml: starship.toml
     ~/.tool-versions: tool-versions
     ~/.vimrc: vimrc
