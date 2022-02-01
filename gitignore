@@ -67,3 +67,6 @@ tags
 Brewfile.lock.json
 
 # End of https://www.toptal.com/developers/gitignore/api/homebrew
+
+# direnv
+.envrc
