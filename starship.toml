@@ -1,9 +1,14 @@
 continuation_prompt = "yo!"
 
 [aws]
-    format = 'AWS [$symbol($profile )(\($region\) )(\[$duration\])]($style)'
-
+    disabled = true
 
 [directory]
     truncation_symbol = ".../"
     truncate_to_repo = false
+
+[gcloud]
+    disabled = true
+
+[kubernetes]
+    disabled = false
