@@ -70,3 +70,4 @@ Brewfile.lock.json
 
 # direnv
 .envrc
+.env
