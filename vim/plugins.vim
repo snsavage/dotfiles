@@ -24,5 +24,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'takac/vim-hardtime'
 Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
 call plug#end()
 
