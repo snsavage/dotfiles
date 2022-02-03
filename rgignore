@@ -1,1 +1,6 @@
-/vendor
+dotbot
+vendor
+.git
+go.sum
+node_modules
+oh-my-zsh
