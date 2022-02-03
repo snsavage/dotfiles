@@ -23,7 +23,4 @@ brew "jq"
 brew "ripgrep"
 brew "tree"
 brew "watch"
-tap "bruceadams/utilities"
-brew "bruceadams/utilities/yj"
-
 
