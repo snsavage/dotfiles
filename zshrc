@@ -12,9 +12,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Aliases
-alias df="cd ~/dotfiles && vim ."
-
 # Starship.rs Setup
 export STARSHIP_CONFIG=~/.starship.toml
 eval "$(starship init zsh)"
@@ -35,7 +32,11 @@ fi
 
 # Aliases
 alias df="cd ~/dotfiles && vim ."
+alias diff="/opt/homebrew/bin/diff --color --side-by-side"
 alias lah="ls -lah"
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="vim"
 
 eval "$(direnv hook zsh)"
 

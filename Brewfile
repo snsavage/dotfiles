@@ -16,6 +16,8 @@ brew "tmux"
 brew "awscli"
 brew "asdf"
 brew "coreutils"
+brew "colordiff"
+brew "diffutils"
 brew "direnv"
 brew "fzf"
 cask "google-cloud-sdk"
@@ -24,3 +26,4 @@ brew "ripgrep"
 brew "tree"
 brew "watch"
 
+brew "luajit", args: ["HEAD"]

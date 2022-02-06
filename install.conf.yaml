@@ -1,5 +1,6 @@
 - defaults:
     link:
+      create: true
       relink: true
     shell:
       stderr: true
@@ -28,6 +29,9 @@
     ~/.vimrc: vimrc
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
+    ~/.config/nvim:
+      path: nvim
+      use_glob: true
 
 # - shell:
 #   -

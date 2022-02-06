@@ -98,7 +98,7 @@ nmap <leader>w :w<cr>
 " nmap <leader>tm :shell <cr>
 " nmap <leader>ln :!learn<cr>
 " nmap <leader>p "+p
-" " nmap <leader>co "+y
+" nmap <leader>co "+y
 
 "imap jk <esc>
 "imap kj <esc>
