@@ -31,6 +31,10 @@ keymap("n", "<leader>w", ":w<cr>", opts)            -- Write file
 keymap("n", "<leader>-", ":wincmd _<cr>:wincmd |<cr>", opts)
 keymap("n", "<leader>=", ":wincmd =<cr>", opts)
 
+-- Telescope
+keymap("n", "<c-p>", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<c-f>", "<cmd>Telescope live_grep<cr>", opts)
+
 -- Resize with arrows
 -- keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 -- keymap("n", "<C-Down>", ":resize -2<CR>", opts)
