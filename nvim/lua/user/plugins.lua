@@ -39,12 +39,17 @@ packer.init {
 }
 
 return require('packer').startup(function(use)
-  use "altercation/vim-colors-solarized"
-  use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
-  use "tpope/vim-commentary"
-  use "tpope/vim-surround"
+  -- Let Packer manager itself
   use "wbthomason/packer.nvim"
 
+  -- Misc Plugins
+  use "altercation/vim-colors-solarized"
+  use "tpope/vim-commentary"
+  use "tpope/vim-surround"
+  use "christoomey/vim-tmux-navigator"
+
+  -- NVim Plugings
+  use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
