@@ -7,6 +7,7 @@ set hidden        " Allow buffer change w/o saving.
 filetype plugin indent on
 
 " Settings
+set mouse=a
 set autoread
 set belloff=all                         " Turn off all visual and audio bells
 set colorcolumn=80                      " Show guideline for maximum width
