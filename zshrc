@@ -27,7 +27,6 @@ else
 fi
 
 # FZF Setup
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case'
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
@@ -53,3 +52,4 @@ ensure_tmux_is_running() {
 
 ensure_tmux_is_running
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
