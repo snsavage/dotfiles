@@ -25,4 +25,5 @@ brew "ripgrep"
 brew "tree"
 brew "watch"
 brew "libpq"
+brew "shellcheck"
 
