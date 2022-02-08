@@ -24,4 +24,5 @@ brew "jq"
 brew "ripgrep"
 brew "tree"
 brew "watch"
+brew "libpq"
 
