@@ -1,5 +1,6 @@
 " Plugins
 source ~/dotfiles/vim/plugins.vim
+source ~/dotfiles/vim/vimwiki.vim
 
 " Minimal Configuration
 set nocompatible  " Allow Vim features

@@ -25,5 +25,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'takac/vim-hardtime'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
