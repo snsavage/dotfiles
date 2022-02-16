@@ -13,7 +13,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-alias df="cd ~/dotfiles && vim ."
+alias dotfiles="cd ~/dotfiles && vim ."
 alias back="cd $(git rev-parse --show-toplevel)"
 
 # Starship.rs Setup
