@@ -27,5 +27,7 @@ Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'vimwiki/vimwiki'
 Plug 'michal-h21/vim-zettel'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
