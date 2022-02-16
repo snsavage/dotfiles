@@ -26,5 +26,6 @@ Plug 'takac/vim-hardtime'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'vimwiki/vimwiki'
+Plug 'michal-h21/vim-zettel'
 call plug#end()
 
