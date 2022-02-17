@@ -18,6 +18,7 @@
   - ["./scripts/tmux_plugin_manager_setup.sh", "Install tmux plugin manager and manage plugins"]
 
 - link:
+    ~/.alacritty.yml: alacritty.yml
     ~/.asdfrc: asdfrc
     ~/.gitconfig: gitconfig
     ~/.githelpers: githelpers
