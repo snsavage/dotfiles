@@ -1,32 +1,26 @@
-# Basics
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/core"
-
-# Environment
-cask "rectangle"
-cask "font-hack"
-cask "font-hack-nerd-font"
-cask "iterm2"
-brew "starship"
-brew "tmux"
-
-# Tools
-brew "awscli"
 brew "asdf"
-brew "coreutils"
+brew "awscli"
 brew "colordiff"
+brew "coreutils"
 brew "diffutils"
 brew "direnv"
 brew "etcd"
 brew "fzf"
-cask "google-cloud-sdk"
 brew "jq"
+brew "libpq"
+brew "luajit", args: ["HEAD"]
 brew "ripgrep"
+brew "shellcheck"
+brew "starship"
+brew "tmux"
 brew "tree"
 brew "watch"
-brew "libpq"
-brew "shellcheck"
-
-brew "luajit", args: ["HEAD"]
+cask "font-hack"
+cask "font-hack-nerd-font"
+cask "google-cloud-sdk"
+cask "iterm2"
+cask "rectangle"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
