@@ -12,6 +12,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Aliases
+alias dotfiles="cd ~/dotfiles && vim ."
+alias back="cd $(git rev-parse --show-toplevel)"
+
 # Starship.rs Setup
 export STARSHIP_CONFIG=~/.starship.toml
 eval "$(starship init zsh)"
@@ -24,7 +28,6 @@ else
 fi
 
 # FZF Setup
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case'
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
@@ -54,3 +57,4 @@ ensure_tmux_is_running() {
 
 ensure_tmux_is_running
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

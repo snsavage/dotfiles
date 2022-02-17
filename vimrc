@@ -1,5 +1,7 @@
 " Plugins
 source ~/dotfiles/vim/plugins.vim
+source ~/dotfiles/vim/vimwiki.vim
+source ~/dotfiles/vim/vimzettel.vim
 
 " Minimal Configuration
 set nocompatible  " Allow Vim features
@@ -7,6 +9,8 @@ set hidden        " Allow buffer change w/o saving.
 filetype plugin indent on
 
 " Settings
+set mouse=a
+set autoread
 set belloff=all                         " Turn off all visual and audio bells
 set colorcolumn=80                      " Show guideline for maximum width
 set directory^=$HOME/.vim/vimswap//     " Set swap file director
@@ -135,6 +139,9 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Netrw Settings
 let g:netrw_banner=0        " disable annoying banner
+
+" vim-jsonnet Settings
+let g:jsonnet_fmt_on_save = 0
 
 " Templates
 nnoremap ,react :-1read $HOME/.vim/templates/.react.js<CR>4jwcw
