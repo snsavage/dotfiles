@@ -6,7 +6,7 @@ env:
 
 window:
   dimensions:
-   columns: 200
+   columns: 245
    lines: 60
   padding:
    x: 2
@@ -14,7 +14,7 @@ window:
 
 font:
   normal:
-    family: hack
+    family: hack nerd font
     style: Regular
   size: 16
   use_thin_strokes: true
