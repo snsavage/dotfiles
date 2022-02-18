@@ -13,8 +13,15 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
+alias back=back_to_git_root
 alias dotfiles="cd ~/dotfiles && vim ."
-alias back="cd $(git rev-parse --show-toplevel)"
+alias lah="ls -lah"
+
+back_to_git_root() {
+    if git rev-parse --git-dir > /dev/null 2>&1; then
+        cd $(git rev-parse --show-toplevel)
+    fi
+}
 
 # Starship.rs Setup
 export STARSHIP_CONFIG=~/.starship.toml
@@ -32,10 +39,6 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case'
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
-
-# Aliases
-alias df="cd ~/dotfiles && vim ."
-alias lah="ls -lah"
 
 eval "$(direnv hook zsh)"
 
