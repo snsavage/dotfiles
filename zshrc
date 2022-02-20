@@ -1,20 +1,17 @@
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/dotfiles/oh-my-zsh"
-
-plugins=(
-    asdf
-    colored-man-pages
-    git
-    helm
-    kubectl
-    terraform
-)
-
-source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/share/antigen/antigen.zsh
+antigen init ~/.antigenrc
 
 # Aliases
-alias dotfiles="cd ~/dotfiles && vim ."
 alias back="cd $(git rev-parse --show-toplevel)"
+alias diff="/opt/homebrew/bin/diff --color --side-by-side"
+alias dotfiles="cd ~/dotfiles && vim ."
+alias lah="ls -lah"
+alias oldvim="vim"
+alias vi="nvim"
+alias vim="nvim"
+
+# Zsh Config
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#586e75'
 
 # Starship.rs Setup
 export STARSHIP_CONFIG=~/.starship.toml
@@ -33,13 +30,6 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
-# Aliases
-alias df="cd ~/dotfiles && vim ."
-alias diff="/opt/homebrew/bin/diff --color --side-by-side"
-alias lah="ls -lah"
-alias vim="nvim"
-alias vi="nvim"
-alias oldvim="vim"
 
 eval "$(direnv hook zsh)"
 

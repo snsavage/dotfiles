@@ -12,12 +12,12 @@
 - shell:
   - ["./scripts/homebrew_setup.sh", "Install and update Homebrew.  Install Brewfile packages."]
   - ["./scripts/git_config_setup.sh", "Ensure that git user name and email are configured"]
-  - ["./scripts/oh_my_zsh_setup.sh", "Install and update Oh My Zsh"]
   - ["defaults write com.apple.Finder AppleShowAllFiles true", "Mac OS - Show all files"]
   - ["$(brew --prefix)/opt/fzf/install", "Install fzf key bindings and fuzzy completion"]
   - ["./scripts/tmux_plugin_manager_setup.sh", "Install tmux plugin manager and manage plugins"]
 
 - link:
+    ~/.antigenrc: antigenrc
     ~/.alacritty.yml: alacritty.yml
     ~/.asdfrc: asdfrc
     ~/.gitconfig: gitconfig
