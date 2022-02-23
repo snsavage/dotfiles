@@ -11,7 +11,7 @@ alias vi="nvim"
 alias vim="nvim"
 
 # Zsh Config
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#586e75'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 
 # Starship.rs Setup
 export STARSHIP_CONFIG=~/.starship.toml
