@@ -20,6 +20,7 @@
     ~/.antigenrc: antigenrc
     ~/.alacritty.yml: alacritty.yml
     ~/.asdfrc: asdfrc
+    ~/.editorconfig: editorconfig
     ~/.gitconfig: gitconfig
     ~/.githelpers: githelpers
     ~/.gitignore: gitignore

@@ -7,6 +7,7 @@ alias diff="/opt/homebrew/bin/diff --color --side-by-side"
 alias dotfiles="cd ~/dotfiles && vim ."
 alias lah="ls -lah"
 alias oldvim="vim"
+alias reload="source ~/.zshrc"
 alias vi="nvim"
 alias vim="nvim"
 

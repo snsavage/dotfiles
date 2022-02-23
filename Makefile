@@ -1,4 +1,8 @@
-.PHONY: source
+.PHONY: hello link source
 
-source:
-	source "${HOME}/.zshrc"
+hello:
+	echo "Hello World!"
+
+link:
+	~/dotfiles/install --only link
+

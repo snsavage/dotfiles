@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
   use "tpope/vim-commentary"
   use "tpope/vim-surround"
   use "christoomey/vim-tmux-navigator"
+  use "editorconfig/editorconfig-vim"
 
   -- NVim Plugings
   use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
