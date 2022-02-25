@@ -11,3 +11,4 @@ kubectl 1.19.15
 golang 1.17.3
 golangci-lint 1.39.0
 minikube 1.25.1
+awscli 2.3.6

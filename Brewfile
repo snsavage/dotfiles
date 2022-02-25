@@ -3,6 +3,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "raggi/ale"
 
 # Environment
 cask "rectangle"
@@ -26,4 +27,5 @@ brew "tree"
 brew "watch"
 brew "libpq"
 brew "shellcheck"
-
+brew "md5sha1sum"
+brew "openssl-osx-ca"
