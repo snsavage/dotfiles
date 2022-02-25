@@ -2,7 +2,7 @@ source /opt/homebrew/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
 # Aliases
-alias back="cd $(git rev-parse --show-toplevel)"
+alias back=back_to_git_root
 alias diff="/opt/homebrew/bin/diff --color --side-by-side"
 alias dotfiles="cd ~/dotfiles && vim ."
 alias lah="ls -lah"

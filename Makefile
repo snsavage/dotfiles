@@ -6,3 +6,5 @@ link:
 brew:
 	./scripts/homebrew_setup.sh
 
+luajit:
+	brew install luajit --HEAD

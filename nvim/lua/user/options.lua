@@ -52,6 +52,5 @@ vim.cmd [[autocmd Filetype gitcommit setlocal spell textwidth=72]]
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
 -- vim.cmd [[set iskeyword+=-]]
 
-vim.cmd [[colorscheme solarized]]
 vim.opt.background = "dark"
 
