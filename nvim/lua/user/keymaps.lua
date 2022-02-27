@@ -37,7 +37,7 @@ keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -- Nvim Tree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opt)
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Resize with arrows
 -- keymap("n", "<C-Up>", ":resize +2<CR>", opts)
