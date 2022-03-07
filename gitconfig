@@ -1,5 +1,6 @@
 [alias]
 	l = "!. ~/.githelpers && pretty_git_log"
+	co = checkout
 
 [core]
 	editor = vim
