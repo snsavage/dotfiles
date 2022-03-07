@@ -1,6 +1,7 @@
 require "nvim-tree"
 require "user.cmp"
 require "user.colorscheme"
+require "user.gitsigns"
 require "user.keymaps"
 require "user.options"
 require "user.plugins"

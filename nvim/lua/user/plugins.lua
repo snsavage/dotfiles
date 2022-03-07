@@ -56,6 +56,12 @@ return require('packer').startup(function(use)
   use "tpope/vim-surround"
   use "christoomey/vim-tmux-navigator"
   use "editorconfig/editorconfig-vim"
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+  }
 
   -- NVim Plugings
   use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
