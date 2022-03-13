@@ -64,10 +64,9 @@ selection:
   save_to_clipboard: true
 
 cursor:
-  # Cursor style
   style:
     shape: Block
-    blinking: On
+    blinking: Always
     unfocused_hollow: true
 
 live_config_reload: true
