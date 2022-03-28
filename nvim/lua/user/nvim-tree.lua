@@ -4,6 +4,9 @@ if not status_ok then
 end
 
 nvim_tree.setup {
-  auto_close = true,
+  update_focused_file = {
+    enable = true,
+    update_cwd = false,
+  },
 }
 
