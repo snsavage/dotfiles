@@ -36,7 +36,7 @@ vim.opt.guifont = "monospace:h17"               -- the font used in graphical ne
 -- Additions from old vimrc
 vim.opt.spell = true
 vim.opt.shiftround = true
-vim.cmd [[set list listchars=tab:»·,trail:·,nbsp:·]]
+-- vim.cmd [[set list listchars=tab:»·,trail:·,nbsp:·]]
 vim.opt.textwidth = 80
 vim.opt.colorcolumn = "+1"
 

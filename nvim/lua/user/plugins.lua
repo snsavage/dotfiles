@@ -81,6 +81,9 @@ return require('packer').startup(function(use)
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
 
+  -- Indent Lines
+  use "lukas-reineke/indent-blankline.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
