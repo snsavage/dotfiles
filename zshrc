@@ -8,6 +8,7 @@ alias dotfiles="cd ~/dotfiles && vim ."
 alias lah="ls -lah"
 alias oldvim="vim"
 alias reload="source ~/.zshrc"
+alias todo='git grep -EI "TODO|SAVAGE"'
 alias vi="nvim"
 alias vim="nvim"
 
