@@ -9,13 +9,6 @@
 
 - clean: ['~']
 
-- shell:
-  - ["./scripts/homebrew_setup.sh", "Install and update Homebrew.  Install Brewfile packages."]
-  - ["./scripts/git_config_setup.sh", "Ensure that git user name and email are configured"]
-  - ["defaults write com.apple.Finder AppleShowAllFiles true", "Mac OS - Show all files"]
-  - ["$(brew --prefix)/opt/fzf/install", "Install fzf key bindings and fuzzy completion"]
-  - ["./scripts/tmux_plugin_manager_setup.sh", "Install tmux plugin manager and manage plugins"]
-
 - link:
     ~/.antigenrc: antigenrc
     ~/.alacritty.yml: alacritty.yml
@@ -34,12 +27,4 @@
     ~/.config/nvim:
       path: nvim
       use_glob: true
-
-# - shell:
-#   -
-#     description: Clone minpac for Vim
-#     command: git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
-#     stdin: false
-#     stout: true
-#     quiet: false
 
