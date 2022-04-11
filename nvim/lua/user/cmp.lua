@@ -3,10 +3,17 @@ if not cmp_status_ok then
   return
 end
 
+local snip_status_ok, luasnip = pcall(require, "luasnip")
+if not snip_status_ok then
+  return
+end
+
+require("luasnip/loaders/from_vscode").lazy_load()
+
 cmp.setup({
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#ananymous"](args.body)
+      luasnip.lsp_expand(args.body)
     end,
   },
   mapping = {
@@ -22,7 +29,7 @@ cmp.setup({
     },
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'vsnip' },
+      { name = 'luasnip' },
       { name = 'buffer' },
       { name = 'path' },
     })

@@ -26,7 +26,6 @@ vim.g.maplocalleader = " "
 -- keymap("n", "<C-k>", "<C-w>k", opts)
 -- keymap("n", "<C-l>", "<C-w>l", opts)
 --
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)       -- Open file explorer
 keymap("n", "<leader>w", ":w<cr>", opts)            -- Write file
 
 keymap("n", "<leader>-", ":wincmd _<cr>:wincmd |<cr>", opts)
