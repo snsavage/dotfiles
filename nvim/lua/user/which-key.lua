@@ -16,16 +16,20 @@ wk.register({
   --   name = "Telescope",
   -- },
   n = {
-    name = "Reset",
+    name = "+Reset",
     b = { "<cmd>%bd | e#<cr>", "Buffers" },
     l = { "<cmd>nohlsearch<cr>", "Search Highlight"},
   },
   x = {
-    name = "Trouble",
+    name = "+Trouble",
     x = { "<cmd>TroubleToggle<cr>", "Toggle"},
     w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace Diagnostics"},
     d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document Diagnosticsle"},
     q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix"},
     l = { "<cmd>TroubleToggle loclist<cr>", "Location List"},
- }
+  },
+  m = {
+    name = "+Make",
+    t = { "<cmd>make! test<cr>", "Make Test"},
+  }
 }, { prefix = "<leader>" })
