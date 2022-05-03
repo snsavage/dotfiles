@@ -39,15 +39,12 @@ packer.init {
 }
 
 return require('packer').startup(function(use)
+
   -- Let Packer manager itself
   use "wbthomason/packer.nvim"
 
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    },
-  }
+  use 'kyazdani42/nvim-tree.lua'
+  use 'kyazdani42/nvim-web-devicons'
 
   -- Misc Plugins
   use "altercation/vim-colors-solarized"
@@ -89,6 +86,11 @@ return require('packer').startup(function(use)
 
   -- Trouble
   use 'folke/trouble.nvim'
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
