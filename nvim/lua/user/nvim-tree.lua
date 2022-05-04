@@ -123,5 +123,8 @@ nvim_tree.setup {
     open_file = {
       resize_window = true
     }
-  }
+  },
+  update_focused_file = {
+    enable = true,
+  },
 }

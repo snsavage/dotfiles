@@ -4,7 +4,4 @@ if not ok then
 end
 
 
-trouble.setup{
-  mode = "quickfix"
-}
-
+trouble.setup{ }
