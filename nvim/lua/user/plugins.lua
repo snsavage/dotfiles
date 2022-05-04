@@ -84,13 +84,9 @@ return require('packer').startup(function(use)
   -- Indent Lines
   use "lukas-reineke/indent-blankline.nvim"
 
-  -- Trouble
   use 'folke/trouble.nvim'
-
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use "jose-elias-alvarez/null-ls.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
