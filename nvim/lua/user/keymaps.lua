@@ -33,8 +33,8 @@ keymap("n", "<leader>=", ":wincmd =<cr>", opts)
 
 -- Telescope
 keymap("n", "<c-p>", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
+-- keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
+-- keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -- Nvim Tree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)

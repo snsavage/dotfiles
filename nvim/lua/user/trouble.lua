@@ -3,5 +3,4 @@ if not ok then
   return
 end
 
-
 trouble.setup{ }

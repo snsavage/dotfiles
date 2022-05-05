@@ -5,11 +5,6 @@ end
 
 wk.setup {}
 
--- nnoremap <leader>ff <cmd>Telescope find_files<cr>
--- nnoremap <leader>fg <cmd>Telescope live_grep<cr>
--- nnoremap <leader>fb <cmd>Telescope buffers<cr>
--- nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
 wk.register({
   e = { "<cmd>NvimTreeToggle<cr>", "Toggle Tree"},
   -- f = {
@@ -31,5 +26,14 @@ wk.register({
   m = {
     name = "+Make",
     t = { "<cmd>make! test<cr>", "Make Test"},
-  }
+  },
 }, { prefix = "<leader>" })
+
+wk.register({
+  f = {
+    name = "Telescope",
+    g = { "<cmd>Telescope live_grep<cr>", "Live Grep"},
+    b = { "<cmd>Telescope buffers<cr>", "Buffers"},
+    h = { "<cmd>Telescope help_tags<cr>", "Help Tags"},
+  },
+})
