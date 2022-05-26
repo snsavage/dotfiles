@@ -7,9 +7,6 @@ wk.setup {}
 
 wk.register({
   e = { "<cmd>NvimTreeToggle<cr>", "Toggle Tree"},
-  -- f = {
-  --   name = "Telescope",
-  -- },
   n = {
     name = "+Reset",
     b = { "<cmd>%bd | e#<cr>", "Buffers" },
