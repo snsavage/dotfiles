@@ -128,6 +128,6 @@ nvim_tree.setup {
     enable = true,
   },
   filters = {
-    dotfiles = true,
+    custom = {".git"}
   },
 }
