@@ -75,3 +75,8 @@ Brewfile.lock.json
 # nvim
 nvim/plugin
 
+# Solargraph
+.solargraph.yml
+
+# Rubocap
+.rubocop.yml
