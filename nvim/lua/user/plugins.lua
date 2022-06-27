@@ -90,6 +90,7 @@ return require('packer').startup(function(use)
 
   -- Language Specific
   use 'hashivim/vim-terraform'
+  use 'google/vim-jsonnet'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
