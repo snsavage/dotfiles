@@ -91,6 +91,7 @@ return require('packer').startup(function(use)
   -- Language Specific
   use 'hashivim/vim-terraform'
   use 'google/vim-jsonnet'
+  vim.g['jsonnet_fmt_on_save'] = 0
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
