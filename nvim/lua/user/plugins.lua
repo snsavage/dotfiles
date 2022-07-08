@@ -50,6 +50,8 @@ return require('packer').startup(function(use)
   use "altercation/vim-colors-solarized"
   use "tpope/vim-commentary"
   use "tpope/vim-surround"
+  use "tpope/vim-unimpaired"
+  use "tpope/vim-repeat"
   use "christoomey/vim-tmux-navigator"
   use "editorconfig/editorconfig-vim"
   use {
