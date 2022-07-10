@@ -5,7 +5,7 @@ DOTFILES_DIR = "${HOME}/dotfiles"
 # reload shell at the end?
 
 .PHONY: all brewfile
-all: brew fzf git link luajit macos tmux
+all: brew fzf git link luajit macos tmux asdf-plugins
 
 brew-check:
 	command -v brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
@@ -37,3 +37,5 @@ macos:
 tmux:
 	./scripts/tmux_plugin_manager_setup.sh
 
+asdf-plugins:
+	cut -d ' ' -f1 tool-versions | xargs -i asdf plugin add {}
