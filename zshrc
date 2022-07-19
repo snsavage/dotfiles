@@ -41,6 +41,8 @@ else
     echo "No local zshrc found."
 fi
 
+ulimit -n 10000
+
 # FZF Setup
 if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case'
