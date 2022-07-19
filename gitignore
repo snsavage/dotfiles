@@ -78,5 +78,8 @@ nvim/plugin
 # Solargraph
 .solargraph.yml
 
-# Rubocap
+# Rubocop
 .rubocop.yml
+
+# Licenses
+local/license.txt
