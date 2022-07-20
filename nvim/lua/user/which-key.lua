@@ -7,6 +7,20 @@ wk.setup {}
 
 wk.register({
   e = { "<cmd>NvimTreeToggle<cr>", "Toggle Tree"},
+  h = {
+    name = "+GitSigns",
+    s = {"<cmd>Gitsigns stage_hunk<CR>", "Stage Hunk"},
+    r = {"<cmd>Gitsigns reset_hunk<CR>", "Reset Hunk"},
+    S = {"<cmd>Gitsigns stage_buffer<CR>", "Stage Buffer"},
+    u = {"<cmd>Gitsigns undo_stage_buffer<CR>", "Undo Stage Buffer"},
+    R = {"<cmd>Gitsigns reset_buffer<CR>", "Reset Buffer"},
+    p = {"<cmd>Gitsigns preview_hunk<CR>", "Preview Hunk"},
+    b = {'<cmd>lua require"gitsigns".blame_line{full=true}<CR>', "Blame Line"},
+  },
+  m = {
+    name = "+Make",
+    t = { "<cmd>make! test<cr>", "Make Test"},
+  },
   n = {
     name = "+Reset",
     b = { "<cmd>%bd | e#<cr>", "Buffers" },
@@ -20,10 +34,6 @@ wk.register({
     q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix"},
     l = { "<cmd>TroubleToggle loclist<cr>", "Location List"},
   },
-  m = {
-    name = "+Make",
-    t = { "<cmd>make! test<cr>", "Make Test"},
-  },
 }, { prefix = "<leader>" })
 
 wk.register({
@@ -35,3 +45,4 @@ wk.register({
     f = { "<cmd>Telescope registers<cr>", "Registers"},
   },
 })
+
