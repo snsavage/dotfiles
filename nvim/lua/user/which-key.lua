@@ -26,6 +26,9 @@ wk.register({
     b = { "<cmd>%bd | e#<cr>", "Buffers" },
     l = { "<cmd>nohlsearch<cr>", "Search Highlight"},
   },
+  t = {
+    b = {"<cmd>Gitsigns toggle_current_line_blame<CR>", "Toggle Current Line Blame"},
+  },
   x = {
     name = "+Trouble",
     x = { "<cmd>TroubleToggle<cr>", "Toggle"},
