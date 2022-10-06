@@ -6,20 +6,25 @@ set -eo pipefail
 
 # Ref: https://medium.com/@alexgued3s/multiple-kubeconfigs-no-problem-f6be646fc07d
 
-# If there's already a kubeconfig file in ~/.kube/config it will import that too and all the contexts
-DEFAULT_KUBECONFIG_FILE="$HOME/.kube/config"
-if test -f "${DEFAULT_KUBECONFIG_FILE}"
+kubeconfig=
+default_config="$HOME/.kube/config"
+extra_configs="$HOME/.kube/contexts"
+
+if test -f "$default_config"
 then
-  export KUBECONFIG="$DEFAULT_KUBECONFIG_FILE"
+  kubeconfig="$default_config"
 fi
-# Your additional kubeconfig files should be inside ~/.kube/config-files
-ADD_KUBECONFIG_FILES="$HOME/.kube/config-files"
-mkdir -p "${ADD_KUBECONFIG_FILES}"
+
+mkdir -p "${extra_configs}"
+
 OIFS="$IFS"
 IFS=$'\n'
-for kubeconfigFile in `find "${ADD_KUBECONFIG_FILES}" -type f -name "*.yml" -o -name "*.yaml"`
+
+for extra_config in `find "${extra_configs}" -type f -name "*.yml" -o -name "*.yaml"`
 do
-    export KUBECONFIG="$kubeconfigFile:$KUBECONFIG"
+  kubeconfig="${extra_config}:${kubeconfig}"
 done
+
 IFS="$OIFS"
 
+printf "$kubeconfig"
