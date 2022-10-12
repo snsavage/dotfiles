@@ -57,7 +57,7 @@ eval "$(direnv hook zsh)"
 bindkey -v
 
 # Kubectl Contexts
-export KUBECONFIG="$(./scripts/load-k8s-configs.sh)"
+export KUBECONFIG="$(~/dotfiles/scripts/load-k8s-configs.sh)"
 
 # Tmux
 _not_inside_tmux() { [[ -z "$TMUX" ]] }
