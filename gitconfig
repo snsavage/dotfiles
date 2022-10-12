@@ -1,21 +1,23 @@
 [alias]
-	l = "!. ~/.githelpers && pretty_git_log"
-	co = checkout
+l = "!. ~/.githelpers && pretty_git_log"
+co = checkout
 
 [core]
-	editor = vim
-	excludesFile = ~/.gitignore
-	pager = less -F -X
+editor = vim
+excludesFile = ~/.gitignore
+pager = less -F -X
 
 [include]
-    path = ~/.gitconfig_local
+path = ~/.gitconfig_local
 
 [init]
-	defaultBranch = main
-[url "git@github.com:"]
-	insteadof = https://github.com/
+defaultBranch = main
+
+[url "ssh://git@github.com/"]
+insteadOf = https://github.com/
+
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
