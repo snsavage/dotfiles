@@ -60,6 +60,7 @@ return require('packer').startup(function(use)
       'nvim-lua/plenary.nvim'
     },
   }
+  use { "fatih/vim-go", run =':GoUpdateBinaries' }
 
   -- NVim Plugings
   use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
