@@ -4,7 +4,7 @@ if not null_ls_status_ok then
 end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-local formatting = null_ls.builtins.formatting
+-- local formatting = null_ls.builtins.formatting
 -- local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup {
@@ -20,7 +20,8 @@ null_ls.setup {
               group = augroup,
               buffer = bufnr,
               -- on 0.8, you should use vim.lsp.buf.format instead
-              callback = vim.lsp.buf.formatting_sync,
+              -- callback = vim.lsp.buf.formatting_sync,
+              callback = vim.lsp.buf.format { async = true }
           })
       end
   end,
