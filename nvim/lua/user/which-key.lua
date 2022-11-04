@@ -43,10 +43,11 @@ wk.register({
 wk.register({
   f = {
     name = "Telescope",
-    g = { "<cmd>Telescope live_grep<cr>", "Live Grep"},
     b = { "<cmd>Telescope buffers<cr>", "Buffers"},
-    h = { "<cmd>Telescope help_tags<cr>", "Help Tags"},
     f = { "<cmd>Telescope registers<cr>", "Registers"},
+    g = { "<cmd>Telescope live_grep<cr>", "Live Grep"},
+    h = { "<cmd>Telescope help_tags<cr>", "Help Tags"},
+    -- s = { "<cmd>Telescope grep_string<cr>", "Grep String"},
   },
 })
 
