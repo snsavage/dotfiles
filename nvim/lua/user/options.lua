@@ -42,7 +42,7 @@ vim.opt.colorcolumn = "+1"
 
 vim.opt.breakindent = true
 vim.cmd [[set breakindentopt=shift:2,min:40,sbr]]
-vim.opt.showbreak = ">>"
+-- vim.opt.showbreak = ">>"
 
 vim.cmd [[autocmd VimResized * :wincmd =]]
 vim.cmd [[autocmd Filetype gitcommit setlocal spell textwidth=72]]

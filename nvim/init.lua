@@ -1,3 +1,4 @@
+require "user.autocmds"
 require "user.cmp"
 require "user.colorscheme"
 require "user.gitsigns"
