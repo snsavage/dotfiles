@@ -57,7 +57,8 @@ eval "$(direnv hook zsh)"
 bindkey -v
 
 # Kubectl Contexts
-export KUBECONFIG="$(~/dotfiles/scripts/load-k8s-configs.sh)"
+# export KUBECONFIG="$(~/dotfiles/scripts/load-k8s-configs.sh)"
+export KUBECONFIG=/Users/scott.savage/.kube/config
 
 # Tmux
 _not_inside_tmux() { [[ -z "$TMUX" ]] }
@@ -71,3 +72,4 @@ ensure_tmux_is_running() {
 ensure_tmux_is_running
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
