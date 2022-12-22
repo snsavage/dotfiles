@@ -5,4 +5,7 @@ return function(use)
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
   }
+
+  use "christoomey/vim-tmux-navigator"
+  use "fatih/vim-go"
 end
