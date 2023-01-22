@@ -1,3 +1,5 @@
+echo "*** Configuring antigen ***"
+
 # Load oh-my-zsh library
 antigen use oh-my-zsh
 
