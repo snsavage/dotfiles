@@ -7,5 +7,6 @@ return function(use)
   }
 
   use "christoomey/vim-tmux-navigator"
+  use "editorconfig/editorconfig-vim"
   use "fatih/vim-go"
 end

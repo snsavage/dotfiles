@@ -18,16 +18,19 @@ vim.opt.swapfile = false                        -- creates a swapfile
 vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
 vim.opt.textwidth = 80
 
+vim.cmd [[autocmd VimResized * :wincmd =]] -- resize when window changes
+
 -- Keymaps
 keymap("n", "<leader>w", ":w<cr>", opts) -- Write file
 keymap("n", "<leader>-", ":wincmd _<cr>:wincmd |<cr>", opts)
 keymap("n", "<leader>=", ":wincmd =<cr>", opts)
+keymap("n", "<leader>nl", "<cmd>nohlsearch<cr>", opts)
 
 -- Telescope
 keymap("n", "<c-p>", "<cmd>Telescope find_files<cr>", opts)
 
 -- nvim-tree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>t", ":NvimTreeToggle<cr>", opts)
 
 require("nvim-tree").setup({
   actions = {
