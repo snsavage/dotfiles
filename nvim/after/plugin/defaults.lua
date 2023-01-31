@@ -28,9 +28,13 @@ keymap("n", "<leader>nl", "<cmd>nohlsearch<cr>", opts)
 
 -- Telescope
 keymap("n", "<c-p>", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>k", "<cmd>Telescope keymaps<cr>", opts)
 
 -- nvim-tree
 keymap("n", "<leader>t", ":NvimTreeToggle<cr>", opts)
+
+-- gitsigns
+keymap("n", "<leader>b", ":Gitsigns toggle_current_line_blame<cr>", opts)
 
 require("nvim-tree").setup({
   actions = {
@@ -42,7 +46,8 @@ require("nvim-tree").setup({
     enable = true,
   },
   filters = {
-    custom = {".git"}
+    custom = {".git"},
+    exclude = { "dotfiles" }
   },
 })
 
