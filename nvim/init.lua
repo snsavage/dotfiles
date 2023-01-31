@@ -173,6 +173,9 @@ require('lualine').setup {
     section_separators = '',
     theme = 'solarized_dark',
   },
+  refresh = {
+    statusline = 100,
+  },
   sections = {
     lualine_c = {
       {
@@ -180,7 +183,21 @@ require('lualine').setup {
         path = 3
       }
     }
-  }
+
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {
+      {
+        'filename',
+        path = 3
+      },
+    },
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
 }
 
 -- Enable Comment.nvim
