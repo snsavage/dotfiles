@@ -10,6 +10,8 @@ $fill\
 $all\
 """
 
+command_timeout = 750
+
 [aws]
   disabled = true
 
@@ -25,3 +27,6 @@ $all\
 
 [kubernetes]
     disabled = false
+
+# [status]
+#   disabled = false
