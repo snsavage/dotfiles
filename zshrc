@@ -60,6 +60,10 @@ eval "$(direnv hook zsh)"
 # Enable vi mode
 bindkey -v
 
+# https://github.com/zsh-users/zsh-history-substring-search
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
 # Kubectl Contexts
 # export KUBECONFIG="$(~/dotfiles/scripts/load-k8s-configs.sh)"
 export KUBECONFIG=/Users/scott.savage/.kube/config
