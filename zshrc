@@ -5,7 +5,8 @@ antigen init ~/.antigenrc
 alias back=back_to_git_root
 alias diff="/opt/homebrew/bin/diff --color --side-by-side"
 alias dotfiles="cd ~/dotfiles && vim ."
-alias lah="ls -lah"
+alias exa='LS_COLORS=" " exa'
+alias lah="exa -lah --icons"
 alias oldvim="vim"
 alias reload="source ~/.zshrc"
 alias savage='git grep -EI "SAVAGE"'
@@ -19,6 +20,12 @@ alias docker-image-rm="docker image rm -f $(docker image ls -f reference='diamol
 
 # Zsh Config
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
+
+# pushd
+setopt AUTO_PUSHD           # Push the current directory visited on the stack.
+setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
+setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
+alias d='dirs -v'
 
 # Exports
 export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
@@ -83,6 +90,5 @@ ensure_tmux_is_running
 
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 
-LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
-export LS_COLORS
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# export LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
+# zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
