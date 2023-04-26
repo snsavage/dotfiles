@@ -177,13 +177,15 @@ require('lualine').setup {
     statusline = 100,
   },
   sections = {
+    lualine_b = {
+      { 'branch', 'diff', 'diagnostics', fmt = function(str) return str:sub(1,10) end }
+    },
     lualine_c = {
       {
         'filename',
-        path = 3
+        path = 1
       }
     }
-
   },
   inactive_sections = {
     lualine_a = {},

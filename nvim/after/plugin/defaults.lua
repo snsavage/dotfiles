@@ -16,7 +16,8 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.swapfile = false                        -- creates a swapfile
 vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
-vim.opt.textwidth = 80
+-- vim.opt.textwidth = 80
+-- vim.opt.wrap = false
 
 vim.cmd [[autocmd VimResized * :wincmd =]] -- resize when window changes
 
@@ -52,11 +53,30 @@ require("nvim-tree").setup({
 })
 
 -- Autocommands
-local api = vim.api
-local augroup = api.nvim_create_augroup("Markdown", { clear = true })
+-- local api = vim.api
+-- local augroup = api.nvim_create_augroup("Markdown", { clear = true })
+--
+-- api.nvim_create_autocmd("FileType", {
+--   group = augroup,
+--   pattern = "markdown",
+--   command = "set linebreak nobreakindent textwidth=0 wrap"
+-- })
+--
 
-api.nvim_create_autocmd("FileType", {
-  group = augroup,
-  pattern = "markdown",
-  command = "set linebreak nobreakindent textwidth=0 wrap"
-})
+-- local lspconfig = require'lspconfig'
+-- local configs = require'lspconfig.configs'
+--
+-- if not configs.regols then
+--   configs.regols = {
+--     default_config = {
+--       cmd = {'regols'};
+--       filetypes = { 'rego' };
+--       root_dir = lspconfig.util.root_pattern(".git");
+--     }
+--   }
+-- end
+-- lspconfig.regols.setup{}
+
+require("telescope").load_extension("dir")
+vim.keymap.set("n", "<leader>fd", "<cmd>Telescope dir live_grep<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>pd", "<cmd>Telescope dir find_files<CR>", { noremap = true, silent = true })
