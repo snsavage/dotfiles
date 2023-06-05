@@ -12,6 +12,13 @@ window:
    x: 8
    y: 8
 
+  # Make `Option` key behave as `Alt` (macOS only):
+  # - OnlyLeft
+  # - OnlyRight
+  # - Both
+  # - None (default)
+  option_as_alt: Both
+
 font:
   normal:
     family: hack nerd font
@@ -74,4 +81,3 @@ shell:
   program: /bin/zsh
   args:
     - --login
-
