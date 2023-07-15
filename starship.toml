@@ -13,20 +13,20 @@ $all\
 command_timeout = 750
 
 [aws]
-  disabled = true
+disabled = true
 
 [directory]
-    truncation_symbol = ".../"
-    truncate_to_repo = false
+truncation_symbol = ".../"
+truncate_to_repo = false
 
 [fill]
-    symbol = " "
+symbol = " "
 
 [gcloud]
-    disabled = true
+disabled = true
 
 [kubernetes]
-    disabled = false
+disabled = false
 
 # [status]
 #   disabled = false
