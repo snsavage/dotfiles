@@ -32,5 +32,5 @@ disabled = false
 disabled = true
 
 [custom.caffeinate]
-command = 'echo "Hello World"'
-when = 'exit 0'
+command = "./scripts/caffeinate.sh"
+when = true
