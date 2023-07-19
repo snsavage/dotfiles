@@ -28,7 +28,9 @@ disabled = true
 [kubernetes]
 disabled = false
 
-# [status]
-#   format = '[\[$common_meaning$signal_name$maybe_int\]]() '
-#   map_symbol = true
-#   disabled = false
+[status]
+disabled = true
+
+[custom.caffeinate]
+command = 'echo "Hello World"'
+when = 'exit 0'
