@@ -17,5 +17,5 @@ vault 1.9.2
 yj 5.0.0
 argocd 2.3.3
 jq 1.6
-buildpack 0.23.0
+buildpack 0.28.0
 kubebuilder 3.5.0
