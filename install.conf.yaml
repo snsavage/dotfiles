@@ -27,4 +27,5 @@
     ~/.config/nvim:
       path: nvim
       use_glob: true
+    ~/.config/bat/config: bat
 
