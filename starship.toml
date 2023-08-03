@@ -37,6 +37,9 @@ symbol = " "
 [gcloud]
 disabled = true
 
+[git_branch]
+truncation_length = 36
+
 [kubernetes]
 disabled = false
 
