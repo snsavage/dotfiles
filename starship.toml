@@ -6,6 +6,7 @@ $git_state\
 $git_metrics\
 $git_status\
 $hg_branch\
+${custom.caffeinate}\
 $fill\
 $all\
 """
@@ -15,9 +16,20 @@ command_timeout = 750
 [aws]
 disabled = true
 
+[buf]
+disabled = true
+
+[custom.caffeinate]
+style = 'bold #6c71c4'
+symbol = '  '
+when = 'pgrep caffeinate'
+
 [directory]
 truncation_symbol = ".../"
 truncate_to_repo = false
+
+[docker_context]
+disabled = true
 
 [fill]
 symbol = " "
@@ -29,8 +41,9 @@ disabled = true
 disabled = false
 
 [status]
-disabled = true
-
-[custom.caffeinate]
-command = "./scripts/caffeinate.sh"
-when = true
+disabled = false
+format = '[$symbol $common_meaning $signal_name $int\]($style)'
+map_symbol = true
+pipestatus = true
+recognize_signal_code = true
+success_symbol = ''
