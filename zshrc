@@ -11,13 +11,13 @@ alias exa='LS_COLORS=" " exa'
 alias lah="exa -lah --icons"
 alias oldvim="vim"
 alias reload="source ~/.zshrc"
-alias savage='git grep -EI "SAVAGE"'
+alias savage='git grep -EI "SAVAGE\:"'
 alias todo='git grep -EI "TODO"'
 alias vi="nvim"
 alias vim="nvim"
 
 # Caffeinate
-alias caf='caffeinate -d -t 1800 >/dev/null'
+alias caf='caffeinate -d >/dev/null'
 alias decaf='kill $(pgrep caffeinate)'
 
 # Docker

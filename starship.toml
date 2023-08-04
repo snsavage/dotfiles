@@ -7,6 +7,7 @@ $git_metrics\
 $git_status\
 $hg_branch\
 ${custom.caffeinate}\
+${custom.savage}\
 $fill\
 $all\
 """
@@ -23,6 +24,13 @@ disabled = true
 style = 'bold #6c71c4'
 symbol = '  '
 when = 'pgrep caffeinate'
+
+[custom.savage]
+command = 'git grep -EI "SAVAGE\:" | wc -l'
+ignore_timeout = true
+style = 'bold #6c71c4'
+symbol = ' '
+when = 'git grep -EI "SAVAGE\:"'
 
 [directory]
 truncation_symbol = ".../"
@@ -45,7 +53,7 @@ disabled = false
 
 [status]
 disabled = false
-format = '[$symbol $common_meaning $signal_name $int\]($style)'
+format = '[$symbol $common_meaning $signal_name $int]($style)'
 map_symbol = true
 pipestatus = true
 recognize_signal_code = true
