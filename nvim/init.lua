@@ -36,6 +36,16 @@ require('packer').startup(function(use)
     },
   }
 
+  use ({
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    opts = {
+      keywords = {
+        TODO = { icon = " ", color = "warning", alt = { "SAVAGE" } },
+      },
+    },
+  })
+
   use { -- Autocompletion
     'hrsh7th/nvim-cmp',
     requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
