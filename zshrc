@@ -3,7 +3,6 @@ antigen init ~/.antigenrc
 
 # Aliases
 alias back=back_to_git_root
-alias cat=bat
 alias man=batman
 alias diff="/opt/homebrew/bin/diff --color --side-by-side"
 alias dotfiles="cd ~/dotfiles && vim ."

@@ -52,6 +52,9 @@ require("nvim-tree").setup({
     custom = {".git"},
     exclude = { "dotfiles" }
   },
+  git = {
+    timeout = 2000
+  }
 })
 
 -- Autocommands
