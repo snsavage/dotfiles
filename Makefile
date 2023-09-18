@@ -33,6 +33,7 @@ git:
 .PHONY: link
 link:
 	~/dotfiles/install --only link
+	ln -sfv "${DOTFILES_DIR}/helix.toml" ~/.config/helix/config.toml
 
 .PHONY: luajit
 luajit:
