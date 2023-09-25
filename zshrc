@@ -7,7 +7,7 @@ alias man=batman
 alias diff="/opt/homebrew/bin/diff --color --side-by-side"
 alias dotfiles="cd ~/dotfiles && vim ."
 alias exa='LS_COLORS=" " exa'
-alias lah="exa -lah --icons"
+alias lah="exa -lah --icons --group-directories-first"
 alias oldvim="vim"
 alias reload="source ~/.zshrc"
 alias savage='git grep -EI "SAVAGE\:"'
