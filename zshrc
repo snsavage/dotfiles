@@ -41,6 +41,10 @@ export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="${HOME}/go/bin:$PATH"
+export PATH="${HOME}/dotfiles/scripts:$PATH"
+export GOBIN="${HOME}/go/bin"
+export ASDF_GOLANG_MOD_VERSION_ENABLED=false
 
 back_to_git_root() {
     if git rev-parse --git-dir > /dev/null 2>&1; then

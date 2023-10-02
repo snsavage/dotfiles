@@ -50,3 +50,13 @@ tmux:
 .PHONY: asdf-plugins
 asdf-plugins:
 	cut -d ' ' -f1 tool-versions | xargs -i asdf plugin add {}
+
+.PHONY: gobin
+gobin:
+	mkdir -p ~/go/bin
+
+.PHONY: golang
+golang: gobin
+	go install golang.org/x/tools/gopls@latest          # LSP
+	go install github.com/go-delve/delve/cmd/dlv@latest # Debugger
+	go install golang.org/x/tools/cmd/goimports@latest  # Formatter
