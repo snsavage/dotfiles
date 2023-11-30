@@ -103,3 +103,5 @@ export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 # zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 . $(pack completion --shell zsh)
+
+eval "$(rbenv init - zsh)"
