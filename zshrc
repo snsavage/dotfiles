@@ -10,7 +10,7 @@ alias exa='LS_COLORS=" " exa'
 alias lah="exa -lah --icons --group-directories-first"
 alias oldvim="vim"
 alias reload="source ~/.zshrc"
-alias savage='git grep -EI "SAVAGE\:"'
+alias savage='rg "SAVAGE\:"'
 alias todo='git grep -EI "TODO"'
 alias vi="nvim"
 alias vim="nvim"
@@ -105,3 +105,5 @@ export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 . $(pack completion --shell zsh)
 
 eval "$(rbenv init - zsh)"
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

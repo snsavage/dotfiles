@@ -12,7 +12,7 @@ $fill\
 $all\
 """
 
-command_timeout = 750
+command_timeout = 500
 
 [aws]
 disabled = true
@@ -50,6 +50,9 @@ truncation_length = 36
 
 [kubernetes]
 disabled = false
+
+[nodejs]
+disabled = true
 
 [status]
 disabled = false
