@@ -10,16 +10,8 @@
 - clean: ['~']
 
 - link:
-    ~/.antigenrc: antigenrc
-    ~/.alacritty.yml: alacritty.yml
-    ~/.asdfrc: asdfrc
     ~/.editorconfig: editorconfig
-    ~/.gitconfig: gitconfig
-    ~/.githelpers: githelpers
-    ~/.gitignore: gitignore
     ~/.rgignore: rgignore
-    ~/.starship.toml: starship.toml
-    ~/.tmux.conf: tmux.conf
     ~/.tool-versions: tool-versions
     ~/.vimrc: vimrc
     ~/.zprofile: zprofile
@@ -27,5 +19,4 @@
     ~/.config/nvim:
       path: nvim
       use_glob: true
-    ~/.config/bat/config: bat
 

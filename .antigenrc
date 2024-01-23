@@ -1,5 +1,3 @@
-echo "*** Configuring antigen ***"
-
 # Load oh-my-zsh library
 antigen use oh-my-zsh
 
@@ -27,3 +25,5 @@ antigen bundle zsh-users/zsh-history-substring-search
 
 # Tell Antigen that you're done
 antigen apply
+
+gum log --time rfc822 --level info "Antigen: .antigenrc applied"

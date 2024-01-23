@@ -4,7 +4,6 @@
 
 [core]
   editor = vim
-  excludesFile = ~/.gitignore
   pager = less -F -X
 
 [filter "lfs"]

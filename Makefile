@@ -1,4 +1,7 @@
-DOTFILES_DIR = "${HOME}/dotfiles"
+SHELL := /bin/bash
+
+HOME := "${HOME}"
+DOTFILES_DIR := "${HOME}/dotfiles"
 
 # TODO:
 # Split between installations, configurations, and updates?
@@ -6,6 +9,26 @@ DOTFILES_DIR = "${HOME}/dotfiles"
 
 .PHONY: all
 all: brew fzf git link luajit macos tmux asdf-plugins
+
+.PHONY: test-config
+test-config:
+	xdg-ninja
+
+# Re: https://systemcrafters.net/managing-your-dotfiles/using-gnu-stow/
+.PHONY: stow-test
+stow-test:
+	@stow -n --verbose --dir="$(HOME)/dotfiles" --target="$(HOME)/.config" .config/
+
+.PHONY: stow
+stow:
+	@stow --verbose --dir="$(HOME)/dotfiles" --target="$(HOME)/.config" .config/
+
+# .PHONY: link
+# link:
+# 	@ln -sfv "$(DOTFILES_DIR)/.editorconfig" "$(HOME)/.editorconfig"
+# 	@ln -sfv "$(DOTFILES_DIR)/.rgignore" "$(HOME)/.rgignore"
+# 	@ln -sfv "$(DOTFILES_DIR)/tmux.conf" "$(HOME)/.config/tmux.conf" 
+# 	@ln -sfv "$(DOTFILES_DIR)/.anitgenrc" "$(HOME)/.antigenrc" 
 
 .PHONY: brew-check
 brew-check:
@@ -29,11 +52,6 @@ fzf:
 .PHONY: git
 git:
 	./scripts/git_config_setup.sh
-
-.PHONY: link
-link:
-	~/dotfiles/install --only link
-	ln -sfv "${DOTFILES_DIR}/helix.toml" ~/.config/helix/config.toml
 
 .PHONY: luajit
 luajit:
