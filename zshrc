@@ -3,7 +3,6 @@ antigen init ~/.antigenrc
 
 # Aliases
 alias back=back_to_git_root
-alias man=batman
 alias diff="/opt/homebrew/bin/diff --color --side-by-side"
 alias dotfiles="cd ~/dotfiles && vim ."
 alias exa='LS_COLORS=" " exa'
@@ -14,6 +13,7 @@ alias savage='rg "SAVAGE\:"'
 alias todo='git grep -EI "TODO"'
 alias vi="nvim"
 alias vim="nvim"
+alias k="kubectl"
 
 # Caffeinate
 alias caf='caffeinate -d >/dev/null'
@@ -33,6 +33,7 @@ setopt PUSHD_SILENT         # Do not print the directory stack after pushd or po
 alias d='dirs -v'
 
 # Exports
+export ASDF_CONFIG_FILE="${HOME}/.config/asdf/.asdfrc"
 export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
@@ -45,6 +46,7 @@ export PATH="${HOME}/go/bin:$PATH"
 export PATH="${HOME}/dotfiles/scripts:$PATH"
 export GOBIN="${HOME}/go/bin"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=false
+export BAT_CONFIG_PATH="${HOME}/.config/bat/bat.conf"
 
 back_to_git_root() {
     if git rev-parse --git-dir > /dev/null 2>&1; then
@@ -57,10 +59,11 @@ export STARSHIP_CONFIG=~/.starship.toml
 eval "$(starship init zsh)"
 
 if [ -f ~/.zshrc_local ]; then
-    echo "Sourcing local zshrc"
+    # SAVAGE: Wrap this to a function to handle missing 'gum'.
+    gum log --time rfc822 --level info "Sourcing ~/.zshrc_local"
     source ~/.zshrc_local
 else
-    echo "No local zshrc found."
+    gum log --time rfc822 --level info "No ~/.zshrc_local found"
 fi
 
 ulimit -n 10000
@@ -82,7 +85,7 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # Kubectl Contexts
 # export KUBECONFIG="$(~/dotfiles/scripts/load-k8s-configs.sh)"
-export KUBECONFIG=/Users/scott.savage/.kube/config
+export KUBECONFIG=~/.kube/config
 
 # Tmux
 _not_inside_tmux() { [[ -z "$TMUX" ]] }
@@ -107,3 +110,5 @@ export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 eval "$(rbenv init - zsh)"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+gum log --time rfc822 --level info "Zsh: .zshrc sourced"
