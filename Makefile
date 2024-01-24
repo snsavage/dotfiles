@@ -17,7 +17,7 @@ test-config:
 # Re: https://systemcrafters.net/managing-your-dotfiles/using-gnu-stow/
 .PHONY: stow-test
 stow-test:
-	@stow -n --verbose --dir="$(HOME)/dotfiles" --target="$(HOME)/.config" .config/
+	@stow -n --verbose --target="$(HOME)/.config" .config/
 
 .PHONY: stow
 stow:
@@ -31,8 +31,8 @@ link:
 
 # 	@ln -sfv "$(DOTFILES_DIR)/.editorconfig" "$(HOME)/.editorconfig"
 # 	@ln -sfv "$(DOTFILES_DIR)/.rgignore" "$(HOME)/.rgignore"
-# 	@ln -sfv "$(DOTFILES_DIR)/tmux.conf" "$(HOME)/.config/tmux.conf" 
-# 	@ln -sfv "$(DOTFILES_DIR)/.anitgenrc" "$(HOME)/.antigenrc" 
+# 	@ln -sfv "$(DOTFILES_DIR)/tmux.conf" "$(HOME)/.config/tmux.conf"
+# 	@ln -sfv "$(DOTFILES_DIR)/.anitgenrc" "$(HOME)/.antigenrc"
 
 .PHONY: brew-check
 brew-check:

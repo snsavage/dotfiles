@@ -1,6 +1,9 @@
 source /opt/homebrew/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
+# XDG Config
+export XDG_CONFIG_HOME="${HOME}/.config"
+
 # Aliases
 alias back=back_to_git_root
 alias diff="/opt/homebrew/bin/diff --color --side-by-side"
