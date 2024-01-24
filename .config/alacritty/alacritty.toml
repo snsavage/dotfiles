@@ -1,0 +1,110 @@
+live_config_reload = true
+
+# TokyoNight Alacritty Colors
+# Default colors
+[colors.primary]
+background = '#24283b'
+foreground = '#c0caf5'
+
+[colors.cursor]
+cursor = '#c0caf5'
+text = '#24283b'
+
+# Normal colors
+[colors.normal]
+black = '#1d202f'
+red = '#f7768e'
+green = '#9ece6a'
+yellow = '#e0af68'
+blue = '#7aa2f7'
+magenta = '#bb9af7'
+cyan = '#7dcfff'
+white = '#a9b1d6'
+
+# Bright colors
+[colors.bright]
+black = '#414868'
+red = '#f7768e'
+green = '#9ece6a'
+yellow = '#e0af68'
+blue = '#7aa2f7'
+magenta = '#bb9af7'
+cyan = '#7dcfff'
+white = '#c0caf5'
+
+# Indexed Colors
+[[colors.indexed_colors]]
+index = 16
+color = '#ff9e64'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#db4b4b'
+
+
+# Solarized
+# [colors]
+# draw_bold_text_with_bright_colors = true
+#
+# [colors.bright]
+# black = "#002b36"
+# blue = "#839496"
+# cyan = "#93a1a1"
+# green = "#586e75"
+# magenta = "#6c71c4"
+# red = "#cb4b16"
+# white = "#fdf6e3"
+# yellow = "#657b83"
+#
+# [colors.cursor]
+# cursor = "#839496"
+# text = "#002b36"
+#
+# [colors.normal]
+# black = "#073642"
+# blue = "#268bd2"
+# cyan = "#2aa198"
+# green = "#859900"
+# magenta = "#d33682"
+# red = "#dc322f"
+# white = "#eee8d5"
+# yellow = "#b58900"
+#
+# [colors.primary]
+# background = "#002b36"
+# foreground = "#839496"
+
+[cursor]
+unfocused_hollow = true
+
+[cursor.style]
+blinking = "Always"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 16
+
+[font.normal]
+family = "hack nerd font"
+style = "Regular"
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[shell]
+args = ["--login"]
+program = "/bin/zsh"
+
+[window]
+option_as_alt = "Both"
+
+[window.dimensions]
+columns = 245
+lines = 60
+
+[window.padding]
+x = 8
+y = 8
