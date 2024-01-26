@@ -28,6 +28,7 @@ link:
 	@ln -sfv "$(DOTFILES_DIR)/.gitignore" "$(HOME)/.gitignore"
 	@ln -sfv "$(DOTFILES_DIR)/.githelpers" "$(HOME)/.githelpers"
 	@ln -sfv "$(DOTFILES_DIR)/.gitconfig" "$(HOME)/.gitconfig"
+	@ln -sfv "$(DOTFILES_DIR)/.antigenrc" "$(HOME)/.antigenrc"
 
 # 	@ln -sfv "$(DOTFILES_DIR)/.editorconfig" "$(HOME)/.editorconfig"
 # 	@ln -sfv "$(DOTFILES_DIR)/.rgignore" "$(HOME)/.rgignore"
