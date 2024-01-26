@@ -58,7 +58,6 @@ back_to_git_root() {
 }
 
 # Starship.rs Setup
-export STARSHIP_CONFIG=~/.starship.toml
 eval "$(starship init zsh)"
 
 if [ -f ~/.zshrc_local ]; then
