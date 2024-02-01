@@ -17,6 +17,7 @@ alias todo='git grep -EI "TODO"'
 alias vi="nvim"
 alias vim="nvim"
 alias k="kubectl"
+alias lz="lazygit"
 
 # Caffeinate
 alias caf='caffeinate -d >/dev/null'
