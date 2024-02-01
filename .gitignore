@@ -83,3 +83,6 @@ nvim/plugin
 
 # Licenses
 local/license.txt
+
+# Delve Debug Binaries
+__debug_bin*
