@@ -4,3 +4,4 @@
 
 local opt = vim.opt
 opt.conceallevel = 0
+opt.relativenumber = false
