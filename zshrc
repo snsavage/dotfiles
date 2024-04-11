@@ -69,7 +69,7 @@ else
     gum log --time rfc822 --level info "No ~/.zshrc_local found"
 fi
 
-ulimit -n 10000
+ulimit -n 100000
 
 # FZF Setup
 if type rg &> /dev/null; then
@@ -115,3 +115,4 @@ eval "$(rbenv init - zsh)"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 gum log --time rfc822 --level info "Zsh: .zshrc sourced"
+export PATH="/opt/homebrew/opt/lsof/bin:$PATH"
