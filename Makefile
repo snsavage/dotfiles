@@ -23,6 +23,11 @@ stow-test:
 stow:
 	@stow --verbose --dir="$(HOME)/dotfiles" --target="$(HOME)/.config" .config/
 
+.PHONY: direnv-config
+direnv-config:
+	@mkdir -p "$(XDG_CONFIG_HOME)/direnv"
+	@ln -sfv "$(DOTFILES_DIR)/direnv.toml" "$(XDG_CONFIG_HOME)/direnv/direnv.toml"
+
 .PHONY: link
 link:
 	@ln -sfv "$(DOTFILES_DIR)/.gitignore" "$(HOME)/.gitignore"
