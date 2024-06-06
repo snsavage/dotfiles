@@ -52,6 +52,8 @@ export GOBIN="${HOME}/go/bin"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=false
 export BAT_CONFIG_PATH="${HOME}/.config/bat/bat.conf"
 
+# direnv
+export DIRENV_LOG_FORMAT=''
 back_to_git_root() {
     if git rev-parse --git-dir > /dev/null 2>&1; then
         cd $(git rev-parse --show-toplevel)
