@@ -28,6 +28,7 @@ indent_style = space
 trim_trailing_whitespace = false
 
 [*.sh]
+indent_size = 2
 binary_next_line = true
 keep_padding = false
 shell_variant = posix
