@@ -35,7 +35,9 @@ link:
 	@ln -sfv "$(DOTFILES_DIR)/.gitconfig" "$(HOME)/.gitconfig"
 	@ln -sfv "$(DOTFILES_DIR)/.antigenrc" "$(HOME)/.antigenrc"
 
-# 	@ln -sfv "$(DOTFILES_DIR)/.editorconfig" "$(HOME)/.editorconfig"
+.PHONY: editor-link
+editor-link:
+	@ln -sfv "$(DOTFILES_DIR)/.editorconfig" "$(HOME)/.editorconfig"
 # 	@ln -sfv "$(DOTFILES_DIR)/.rgignore" "$(HOME)/.rgignore"
 # 	@ln -sfv "$(DOTFILES_DIR)/tmux.conf" "$(HOME)/.config/tmux.conf"
 # 	@ln -sfv "$(DOTFILES_DIR)/.anitgenrc" "$(HOME)/.antigenrc"
