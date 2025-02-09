@@ -2,7 +2,11 @@ source /opt/homebrew/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
 # XDG Config
+export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_STATE_HOME="${HOME}/.cache"
+export XDG_RUNTIME_DIR="/run/user/${UID}"
 
 # Aliases
 alias back=back_to_git_root
