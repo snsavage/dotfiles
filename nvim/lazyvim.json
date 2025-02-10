@@ -4,10 +4,11 @@
     "lazyvim.plugins.extras.test.core",
     "lazyvim.plugins.extras.coding.copilot",
     "lazyvim.plugins.extras.lang.go",
-    "lazyvim.plugins.extras.lang.terraform"
+    "lazyvim.plugins.extras.lang.terraform",
+    "lazyvim.plugins.extras.lang.helm",
   ],
   "news": {
-    "NEWS.md": "2123"
+    "NEWS.md": "6520"
   },
-  "version": 2
+  "version": 6
 }
