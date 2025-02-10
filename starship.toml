@@ -25,12 +25,12 @@ style = 'bold #6c71c4'
 symbol = '  '
 when = 'pgrep caffeinate'
 
-[custom.savage]
-command = 'git grep -EI "SAVAGE\:" | wc -l'
-ignore_timeout = true
-style = 'bold #6c71c4'
-symbol = ' '
-when = 'git grep -EI "SAVAGE\:"'
+# [custom.savage]
+# command = 'git grep -EI "SAVAGE\:" | wc -l'
+# ignore_timeout = true
+# style = 'bold #6c71c4'
+# symbol = ' '
+# when = 'git grep -EI "SAVAGE\:"'
 
 [directory]
 truncation_symbol = ".../"
@@ -50,6 +50,9 @@ truncation_length = 36
 
 [kubernetes]
 disabled = false
+
+[nix_shell]
+disabled = true
 
 [nodejs]
 disabled = true
