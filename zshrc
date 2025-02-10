@@ -12,8 +12,8 @@ export XDG_RUNTIME_DIR="/run/user/${UID}"
 alias back=back_to_git_root
 alias diff="/opt/homebrew/bin/diff --color --side-by-side"
 alias dotfiles="cd ~/dotfiles && vim ."
-alias exa='LS_COLORS=" " exa'
-alias lah="exa -lah --icons --group-directories-first"
+alias eza='LS_COLORS=" " eza'
+alias lah="eza -lah --icons --group-directories-first"
 alias oldvim="vim"
 alias reload="source ~/.zshrc"
 alias savage='rg "SAVAGE\:"'
