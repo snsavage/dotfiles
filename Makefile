@@ -22,6 +22,10 @@ stow-test:
 stow:
 	stow -v --target=$(HOME)/.config .
 
+.PHONY: dotfiles
+dotfiles:
+	stow --dotfiles editorconfig
+
 .PHONY: brew-check
 brew-check:
 	command -v brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh

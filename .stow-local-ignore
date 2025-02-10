@@ -16,7 +16,6 @@
 ^/Makefile
 ^/README.*
 ^/\.antigenrc
-^/\.editorconfig
 ^/nvim.bak
 ^/rgignore
 ^/tool-versions
