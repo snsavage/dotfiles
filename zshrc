@@ -22,6 +22,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias k="kubectl"
 alias lz="lazygit"
+alias scratch="cd ~/gh/scratch"
 
 # Caffeinate
 alias caf='caffeinate -d >/dev/null'
@@ -41,6 +42,7 @@ setopt PUSHD_SILENT         # Do not print the directory stack after pushd or po
 alias d='dirs -v'
 
 # Exports
+export EDITOR="nvim"
 export ASDF_CONFIG_FILE="${HOME}/.config/asdf/.asdfrc"
 export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
