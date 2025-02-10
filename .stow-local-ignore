@@ -1,4 +1,25 @@
-\.git
-\.gitignore
+# Homebrew
+^/Brewfile
+^/Brewfile.lock.json
 
+# Git
+\.git
+\.gitconfig
+\.githelpers
+\.gitignore
+\.gitmodules
+
+# Other Directories
+^/scripts
+
+# Other Files
+^/Makefile
 ^/README.*
+^/\.antigenrc
+^/\.editorconfig
+^/nvim.bak
+^/rgignore
+^/tool-versions
+^/vimrc
+^/zprofile
+^/zshrc
