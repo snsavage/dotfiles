@@ -1,11 +1,8 @@
 SHELL := /bin/bash
 
+# TODO: Remove these.
 HOME := "${HOME}"
 DOTFILES_DIR := "${HOME}/dotfiles"
-
-# TODO:
-# Split between installations, configurations, and updates?
-# reload shell at the end?
 
 .PHONY: all
 all: brew fzf git link luajit macos tmux asdf-plugins
@@ -14,27 +11,35 @@ all: brew fzf git link luajit macos tmux asdf-plugins
 test-config:
 	xdg-ninja
 
+.PHONY: list-config
+list-config:
+	@eza -lah --icons --group-directories-first $(HOME)/.config/
+
 # Re: https://systemcrafters.net/managing-your-dotfiles/using-gnu-stow/
 .PHONY: stow-test
 stow-test:
-	@stow -n --verbose --target="$(HOME)/.config" .config/
+	stow -v --simulate --target=/Users/snsavage/.config .
 
 .PHONY: stow
 stow:
-	@stow --verbose --dir="$(HOME)/dotfiles" --target="$(HOME)/.config" .config/
+	stow -v --target=/Users/snsavage/.config .
 
+# TODO: Remove these.
 .PHONY: direnv-config
 direnv-config:
 	@mkdir -p "$(XDG_CONFIG_HOME)/direnv"
 	@ln -sfv "$(DOTFILES_DIR)/direnv.toml" "$(XDG_CONFIG_HOME)/direnv/direnv.toml"
 
+# TODO: Remove these.
 .PHONY: link
 link:
+	@ln -sfv "$(DOTFILES_DIR)/.gitignore" "$(HOME)/.gitignore"
 	@ln -sfv "$(DOTFILES_DIR)/.gitignore" "$(HOME)/.gitignore"
 	@ln -sfv "$(DOTFILES_DIR)/.githelpers" "$(HOME)/.githelpers"
 	@ln -sfv "$(DOTFILES_DIR)/.gitconfig" "$(HOME)/.gitconfig"
 	@ln -sfv "$(DOTFILES_DIR)/.antigenrc" "$(HOME)/.antigenrc"
 
+# TODO: Remove these.
 .PHONY: editor-link
 editor-link:
 	@ln -sfv "$(DOTFILES_DIR)/.editorconfig" "$(HOME)/.editorconfig"
