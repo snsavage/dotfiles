@@ -17,11 +17,11 @@ list-config:
 # Re: https://systemcrafters.net/managing-your-dotfiles/using-gnu-stow/
 .PHONY: stow-test
 stow-test:
-	stow -v --simulate --target=/Users/snsavage/.config .
+	stow -v --simulate --target=$(HOME)/.config .
 
 .PHONY: stow
 stow:
-	stow -v --target=/Users/snsavage/.config .
+	stow -v --target=$(HOME)/.config .
 
 .PHONY: brew-check
 brew-check:
