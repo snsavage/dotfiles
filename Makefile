@@ -2,7 +2,6 @@ SHELL := /bin/bash
 
 # TODO: Remove these.
 HOME := "${HOME}"
-DOTFILES_DIR := "${HOME}/dotfiles"
 
 .PHONY: all
 all: brew fzf git link luajit macos tmux asdf-plugins
@@ -23,29 +22,6 @@ stow-test:
 .PHONY: stow
 stow:
 	stow -v --target=/Users/snsavage/.config .
-
-# TODO: Remove these.
-.PHONY: direnv-config
-direnv-config:
-	@mkdir -p "$(XDG_CONFIG_HOME)/direnv"
-	@ln -sfv "$(DOTFILES_DIR)/direnv.toml" "$(XDG_CONFIG_HOME)/direnv/direnv.toml"
-
-# TODO: Remove these.
-.PHONY: link
-link:
-	@ln -sfv "$(DOTFILES_DIR)/.gitignore" "$(HOME)/.gitignore"
-	@ln -sfv "$(DOTFILES_DIR)/.gitignore" "$(HOME)/.gitignore"
-	@ln -sfv "$(DOTFILES_DIR)/.githelpers" "$(HOME)/.githelpers"
-	@ln -sfv "$(DOTFILES_DIR)/.gitconfig" "$(HOME)/.gitconfig"
-	@ln -sfv "$(DOTFILES_DIR)/.antigenrc" "$(HOME)/.antigenrc"
-
-# TODO: Remove these.
-.PHONY: editor-link
-editor-link:
-	@ln -sfv "$(DOTFILES_DIR)/.editorconfig" "$(HOME)/.editorconfig"
-# 	@ln -sfv "$(DOTFILES_DIR)/.rgignore" "$(HOME)/.rgignore"
-# 	@ln -sfv "$(DOTFILES_DIR)/tmux.conf" "$(HOME)/.config/tmux.conf"
-# 	@ln -sfv "$(DOTFILES_DIR)/.anitgenrc" "$(HOME)/.antigenrc"
 
 .PHONY: brew-check
 brew-check:

@@ -1,17 +1,13 @@
 # dotfiles
 
-Managed with: [dotbot](https://github.com/anishathalye/dotbot).
-
 ## TODOs
 
  - [ ] Makefile creates symlinks with Stow
  - [ ] Makefile installs homebrew packages
- - [*] Remove dotbot
  - [ ] Configure XDG
-
+ - [x] Remove dotbot
 
 ## References
-
 
 ### Homebrew
 
