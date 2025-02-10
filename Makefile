@@ -14,7 +14,6 @@ test-config:
 list-config:
 	@eza -lah --icons --group-directories-first $(HOME)/.config/
 
-# Re: https://systemcrafters.net/managing-your-dotfiles/using-gnu-stow/
 .PHONY: stow-test
 stow-test:
 	stow -v --simulate --target=$(HOME)/.config .
