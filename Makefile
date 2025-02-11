@@ -26,6 +26,7 @@ stow:
 	stow git
 	stow lazygit
 	stow nvim
+	stow process-compose
 	stow ripgrep
 	stow starship
 	stow tmux
