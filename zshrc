@@ -23,6 +23,7 @@ alias vim="nvim"
 alias k="kubectl"
 alias lz="lazygit"
 alias scratch="cd ~/gh/scratch"
+alias tree="tree -a"
 
 # Caffeinate
 alias caf='caffeinate -d >/dev/null'
@@ -103,7 +104,7 @@ _not_inside_tmux() { [[ -z "$TMUX" ]] }
 
 ensure_tmux_is_running() {
   if _not_inside_tmux; then
-    ~/dotfiles/tmux/tat.sh
+    ~/dotfiles/scripts/tat.sh
   fi
 }
 

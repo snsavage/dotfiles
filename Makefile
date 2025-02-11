@@ -14,19 +14,20 @@ test-config:
 list-config:
 	@eza -lah --icons --group-directories-first $(HOME)/.config/
 
-.PHONY: stow-test
-stow-test:
-	stow -v --simulate --target=$(HOME)/.config .
-
 .PHONY: stow
 stow:
-	stow -v --target=$(HOME)/.config .
-
-.PHONY: dotfiles
-dotfiles:
-	stow --dotfiles editorconfig
-	stow --dotfiles antigen
-	stow --dotfiles git
+	stow alacritty
+	stow antigen
+	stow asdf
+	stow bat
+	stow direnv
+	stow dlv
+	stow editorconfig
+	stow git
+	stow lazygit
+	stow nvim
+	stow tmux
+	stow vim
 
 .PHONY: brew-check
 brew-check:
