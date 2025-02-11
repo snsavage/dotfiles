@@ -25,6 +25,7 @@ stow:
 .PHONY: dotfiles
 dotfiles:
 	stow --dotfiles editorconfig
+	stow --dotfiles antigen
 
 .PHONY: brew-check
 brew-check:

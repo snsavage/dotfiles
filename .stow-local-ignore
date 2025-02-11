@@ -15,7 +15,6 @@
 # Other Files
 ^/Makefile
 ^/README.*
-^/\.antigenrc
 ^/nvim.bak
 ^/rgignore
 ^/tool-versions
