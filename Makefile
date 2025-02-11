@@ -26,8 +26,11 @@ stow:
 	stow git
 	stow lazygit
 	stow nvim
+	stow ripgrep
+	stow starship
 	stow tmux
 	stow vim
+	stow zsh
 
 .PHONY: brew-check
 brew-check:
