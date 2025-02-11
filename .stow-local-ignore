@@ -4,10 +4,6 @@
 
 # Git
 \.git
-\.gitconfig
-\.githelpers
-\.gitignore
-\.gitmodules
 
 # Other Directories
 ^/scripts
