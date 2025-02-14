@@ -2,11 +2,7 @@ source /opt/homebrew/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
 # XDG Config
-export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_CONFIG_HOME="${HOME}/.config"
-export XDG_DATA_HOME="${HOME}/.local/share"
-export XDG_STATE_HOME="${HOME}/.cache"
-export XDG_RUNTIME_DIR="/run/user/${UID}"
 
 # Aliases
 alias back=back_to_git_root
@@ -116,8 +112,6 @@ export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 
 # export LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
 # zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-
-. $(pack completion --shell zsh)
 
 eval "$(rbenv init - zsh)"
 
