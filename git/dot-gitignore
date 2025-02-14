@@ -86,3 +86,6 @@ local/license.txt
 
 # Delve Debug Binaries
 __debug_bin*
+
+# TMUX Plugin
+tmux/.config/tmux/plugins/*
