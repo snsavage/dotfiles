@@ -40,6 +40,7 @@ alias d='dirs -v'
 
 # Exports
 export EDITOR="nvim"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export ASDF_CONFIG_FILE="${HOME}/.config/asdf/.asdfrc"
 export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
@@ -119,3 +120,5 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 gum log --time rfc822 --level info "Zsh: .zshrc sourced"
 export PATH="/opt/homebrew/opt/lsof/bin:$PATH"
+
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
