@@ -29,6 +29,12 @@ return {
         request = "launch",
         program = "./cmd/repo-server",
       },
+      {
+        type = "go",
+        name = "main.go",
+        request = "launch",
+        program = ".",
+      },
     },
   },
 }
