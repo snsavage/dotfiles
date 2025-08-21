@@ -51,8 +51,17 @@ setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
 alias d='dirs -v'
 
+# asdf
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export ASDF_CONFIG_FILE="${HOME}/.config/asdf/.asdfrc"
+export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+# . ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
+
+# asdf completions
+# fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+# autoload -Uz compinit && compinit
+
+# Exports
 export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
 export EDITOR="nvim"
 export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
@@ -66,7 +75,6 @@ export PATH="${HOME}/go/bin:$PATH"
 export PATH="${HOME}/dotfiles/scripts:$PATH"
 export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 export GOBIN="${HOME}/go/bin"
-export ASDF_GOLANG_MOD_VERSION_ENABLED=false
 export BAT_CONFIG_PATH="${HOME}/.config/bat/bat.conf"
 export KUBE_EDITOR=vim
 
@@ -135,4 +143,3 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 gum log --time rfc822 --level info "Zsh: .zshrc sourced"
 export PATH="/opt/homebrew/opt/lsof/bin:$PATH"
 
-fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
