@@ -22,6 +22,18 @@ alias lz="lazygit"
 alias scratch="cd ~/gh/scratch"
 alias tree="tree -a"
 
+kswitch() {
+  if [ $# -eq 2 ]; then
+    kubectx $1 && kubens $2
+  else
+    echo "Usage: kswitch <context> <namespace>"
+  fi
+}
+
+alias kx='kubectx'
+alias kn='kubens'
+alias ks='kswitch'
+
 # Caffeinate
 alias caf='caffeinate -d >/dev/null'
 alias decaf='kill $(pgrep caffeinate)'
