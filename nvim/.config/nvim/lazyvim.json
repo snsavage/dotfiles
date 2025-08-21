@@ -7,7 +7,8 @@
     "lazyvim.plugins.extras.lang.helm",
     "lazyvim.plugins.extras.lang.terraform",
     "lazyvim.plugins.extras.lang.yaml",
-    "lazyvim.plugins.extras.test.core"
+    "lazyvim.plugins.extras.test.core",
+    "lazyvim.plugins.extras.vscode"
   ],
   "news": {
     "NEWS.md": "10960"
