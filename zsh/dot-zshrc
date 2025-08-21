@@ -64,6 +64,7 @@ export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="${HOME}/go/bin:$PATH"
 export PATH="${HOME}/dotfiles/scripts:$PATH"
+export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 export GOBIN="${HOME}/go/bin"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=false
 export BAT_CONFIG_PATH="${HOME}/.config/bat/bat.conf"
