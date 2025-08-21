@@ -38,11 +38,10 @@ setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
 alias d='dirs -v'
 
-# Exports
-export EDITOR="nvim"
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export ASDF_CONFIG_FILE="${HOME}/.config/asdf/.asdfrc"
 export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
+export EDITOR="nvim"
 export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
@@ -55,6 +54,7 @@ export PATH="${HOME}/dotfiles/scripts:$PATH"
 export GOBIN="${HOME}/go/bin"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=false
 export BAT_CONFIG_PATH="${HOME}/.config/bat/bat.conf"
+export KUBE_EDITOR=vim
 
 # direnv
 export DIRENV_LOG_FORMAT=''
