@@ -143,3 +143,6 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 gum log --time rfc822 --level info "Zsh: .zshrc sourced"
 export PATH="/opt/homebrew/opt/lsof/bin:$PATH"
 
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/scott.savage/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
