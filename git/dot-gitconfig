@@ -29,3 +29,5 @@
   insteadOf = https://github.com/
 [pull]
 	ff = only
+[push]
+	autoSetupRemote = true
