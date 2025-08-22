@@ -1,10 +1,11 @@
 {
-    "window.commandCenter": true,
-    "workbench.colorTheme": "Solarized Light",
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
-    "workbench.activityBar.orientation": "vertical",
-    "workbench.remoteIndicator.showExtensionRecommendations": false,
-    "extensions.ignoreRecommendations": true
+  "window.commandCenter": true,
+  "workbench.colorTheme": "Solarized Light",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.remoteIndicator.showExtensionRecommendations": false,
+  "extensions.ignoreRecommendations": true,
+  "terminal.external.osxExec": "Alacritty.app"
 }
