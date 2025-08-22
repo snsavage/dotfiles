@@ -118,11 +118,17 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 # export KUBECONFIG="$(~/dotfiles/scripts/load-k8s-configs.sh)"
 export KUBECONFIG=~/.kube/config
 
-# Tmux
-_not_inside_tmux() { [[ -z "$TMUX" ]] }
 
+# Tmux
+# Detect VS Code/Cursor integrated terminal
+# This causes issues with tmux.
+_is_vscode() { [[ -n "$VSCODE_PID" ]] }
+_is_cursor() { [[ -n "$CURSOR_PID" ]] }
+_is_ide_terminal() { _is_vscode || _is_cursor }
+
+# Use this in your tmux logic
 ensure_tmux_is_running() {
-  if _not_inside_tmux; then
+  if _not_inside_tmux && ! _is_ide_terminal; then
     ~/dotfiles/scripts/tat.sh
   fi
 }
