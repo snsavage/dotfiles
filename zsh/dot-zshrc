@@ -53,17 +53,12 @@ alias d='dirs -v'
 
 # asdf
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-export ASDF_CONFIG_FILE="${HOME}/.config/asdf/.asdfrc"
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
-# . ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
-
-# asdf completions
-# fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
-# autoload -Uz compinit && compinit
 
 # Exports
-export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
 export EDITOR="nvim"
+export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
@@ -152,3 +147,5 @@ export PATH="/opt/homebrew/opt/lsof/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/scott.savage/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+autoload -Uz compinit && compinit
