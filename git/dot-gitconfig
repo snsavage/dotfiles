@@ -3,7 +3,7 @@
   co = checkout
 
 [core]
-  editor = vim
+	editor = nvim
   pager = less -F -X
 	excludesfile = /Users/scott.savage/.gitignore
 
@@ -20,7 +20,7 @@
   defaultBranch = main
 
 [merge]
-    ff = only
+  ff = only
 
 [safe]
   directory = /todo
