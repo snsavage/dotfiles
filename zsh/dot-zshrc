@@ -112,6 +112,9 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 # Kubectl Contexts
 # export KUBECONFIG="$(~/dotfiles/scripts/load-k8s-configs.sh)"
 export KUBECONFIG=~/.kube/config
+if [ -f "${HOME}/.kube/lab-config" ]; then
+  export KUBECONFIG="${KUBECONFIG}:${HOME}/.kube/lab-config"
+fi
 
 
 # Tmux
