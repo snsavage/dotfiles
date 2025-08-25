@@ -7,5 +7,6 @@
   "workbench.activityBar.orientation": "vertical",
   "workbench.remoteIndicator.showExtensionRecommendations": false,
   "extensions.ignoreRecommendations": true,
-  "terminal.external.osxExec": "Alacritty.app"
+  "terminal.external.osxExec": "Alacritty.app",
+  "terminal.integrated.defaultProfile.osx": "zsh"
 }
