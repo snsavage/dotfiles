@@ -54,10 +54,7 @@ alias d='dirs -v'
 # asdf
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
-<<<<<<< HEAD
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
-=======
->>>>>>> c739ad1 (Add zoxide init)
 
 # Exports
 export EDITOR="nvim"
