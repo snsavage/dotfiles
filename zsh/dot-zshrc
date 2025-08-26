@@ -10,6 +10,24 @@ log_info() {
   fi
 }
 
+# Tmux
+_not_inside_tmux() { [[ -z "$TMUX" ]] }
+_is_ide_terminal() { [[ "$TERM_PROGRAM" =~ ^(vscode|cursor)$ ]] }
+
+ensure_tmux_is_running() {
+  # Detect VS Code/Cursor integrated terminal.  They cause issues with tmux.
+  if _is_ide_terminal; then
+    return 0
+  fi
+
+  if _not_inside_tmux; then
+    log_info "Starting tmux session"
+    ~/dotfiles/scripts/tat.sh
+  fi
+}
+
+ensure_tmux_is_running
+
 # XDG Config
 export XDG_CONFIG_HOME="${HOME}/.config"
 
@@ -122,23 +140,6 @@ export KUBECONFIG=~/.kube/config
 if [ -f "${HOME}/.kube/lab-config" ]; then
   export KUBECONFIG="${KUBECONFIG}:${HOME}/.kube/lab-config"
 fi
-
-# Tmux
-_not_inside_tmux() { [[ -z "$TMUX" ]] }
-
-# Detect VS Code/Cursor integrated terminal
-# This causes issues with tmux.
-_is_vscode() { [[ -n "$VSCODE_PID" ]] }
-_is_cursor() { [[ -n "$CURSOR_PID" ]] }
-_is_ide_terminal() { _is_vscode || _is_cursor }
-
-ensure_tmux_is_running() {
-  if _not_inside_tmux && ! _is_ide_terminal; then
-    ~/dotfiles/scripts/tat.sh
-  fi
-}
-
-ensure_tmux_is_running
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
