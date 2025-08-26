@@ -2,6 +2,14 @@
 source /opt/homebrew/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
+log_info() {
+  if command -v gum >/dev/null ; then
+    gum log --time rfc822 --level info "$1"
+  else
+    echo "$1"
+  fi
+}
+
 # XDG Config
 export XDG_CONFIG_HOME="${HOME}/.config"
 
@@ -85,11 +93,10 @@ back_to_git_root() {
 eval "$(starship init zsh)"
 
 if [ -f ~/.zshrc_local ]; then
-    # SAVAGE: Wrap this to a function to handle missing 'gum'.
-    gum log --time rfc822 --level info "Sourcing ~/.zshrc_local"
+    log_info "Sourcing ~/.zshrc_local"
     source ~/.zshrc_local
 else
-    gum log --time rfc822 --level info "No ~/.zshrc_local found"
+    log_info "No ~/.zshrc_local found"
 fi
 
 ulimit -n 100000
@@ -144,7 +151,7 @@ eval "$(rbenv init - zsh)"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-gum log --time rfc822 --level info "Zsh: .zshrc sourced"
+log_info "Zsh: .zshrc sourced"
 export PATH="/opt/homebrew/opt/lsof/bin:$PATH"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
