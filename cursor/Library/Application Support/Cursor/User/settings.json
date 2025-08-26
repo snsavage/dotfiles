@@ -1,6 +1,6 @@
 {
   "window.commandCenter": true,
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Catppuccin Frappé",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
@@ -8,5 +8,11 @@
   "workbench.remoteIndicator.showExtensionRecommendations": false,
   "extensions.ignoreRecommendations": true,
   "terminal.external.osxExec": "Alacritty.app",
-  "terminal.integrated.defaultProfile.osx": "zsh"
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "workbench.settings.applyToAllProfiles": [
+    "editor.fontSize"
+  ],
+  "editor.fontSize": 14,
+  "debug.console.fontSize": 14,
+  "terminal.integrated.fontSize": 14
 }
