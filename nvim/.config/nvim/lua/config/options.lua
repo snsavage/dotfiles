@@ -5,6 +5,3 @@
 local opt = vim.opt
 opt.conceallevel = 0
 opt.relativenumber = false
-
--- Disable inlay hints by default
-vim.lsp.inlay_hint.enable(false)
