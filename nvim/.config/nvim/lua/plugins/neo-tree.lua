@@ -1,6 +1,6 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
-  config = {
+  opts = {
     filesystem = {
       filtered_items = {
         visible = false,
@@ -8,6 +8,7 @@ return {
         always_show = {
           ".envrc",
           ".envrc-sample",
+          ".env",
         },
       },
     },
