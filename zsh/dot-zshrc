@@ -99,6 +99,9 @@ export GOBIN="${HOME}/go/bin"
 export BAT_CONFIG_PATH="${HOME}/.config/bat/bat.conf"
 export KUBE_EDITOR=vim
 
+# https://github.com/hashicorp/terraform-provider-aws/issues/39523
+export TFENV_ARCH=arm64
+
 # direnv
 export DIRENV_LOG_FORMAT=''
 back_to_git_root() {
