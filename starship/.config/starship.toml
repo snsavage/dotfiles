@@ -51,6 +51,9 @@ disabled = true
 [git_branch]
 truncation_length = 36
 
+[git_commit]
+only_detached = false
+
 [kubernetes]
 disabled = false
 format = '[$symbol$context( \($namespace\))]($style) '
