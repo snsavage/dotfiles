@@ -31,6 +31,9 @@ ensure_tmux_is_running
 # XDG Config
 export XDG_CONFIG_HOME="${HOME}/.config"
 
+# nvim-kickstart
+alias kick='NVIM_APPNAME="kickstart-nvim" nvim'
+
 # Aliases
 alias back=back_to_git_root
 alias diff="/opt/homebrew/bin/diff --color --side-by-side"
