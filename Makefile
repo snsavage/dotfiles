@@ -20,6 +20,7 @@ stow:
 	stow git
 	stow lazygit
 	stow nvim
+	stow kickstart-nvim
 	stow process-compose
 	stow ripgrep
 	stow starship
