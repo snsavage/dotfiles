@@ -26,3 +26,11 @@
 ### Cursor/VS Code Configuration
 
 - https://anhari.dev/blog/saving-vscode-settings-in-your-dotfiles - Reference for configuring Cursor extensions and settings management
+
+## Stuff
+
+- https://macos-defaults.com/
+- https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f
+- https://github.com/mathiasbynens/dotfiles/blob/main/.macos
+- https://dotfiles.github.io/inspiration/
+- https://github.com/webpro/awesome-dotfiles
