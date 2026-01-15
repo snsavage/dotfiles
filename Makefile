@@ -17,6 +17,7 @@ stow:
 	stow direnv
 	stow dlv
 	stow editorconfig
+	stow gh
 	stow git
 	stow lazygit
 	stow nvim
@@ -76,11 +77,3 @@ golang: gobin
 	go install golang.org/x/tools/gopls@latest          # LSP
 	go install github.com/go-delve/delve/cmd/dlv@latest # Debugger
 	go install golang.org/x/tools/cmd/goimports@latest  # Formatter
-
-.PHONY: cursor
-cursor-save-extensions:
-	./scripts/cursor-extensions.sh
-
-.PHONY: cursor-install-extensions
-cursor-install-extensions:
-	./scripts/cursor-install-extensions.sh

@@ -40,6 +40,7 @@ alias diff="/opt/homebrew/bin/diff --color --side-by-side"
 alias dotfiles="cd ~/dotfiles && vim ."
 alias eza='LS_COLORS=" " eza'
 alias lah="eza -lah --icons --group-directories-first"
+alias lat="eza -lah --icons --group-directories-first --sort=type"
 alias oldvim="vim"
 alias reload="source ~/.zshrc"
 alias savage='rg "SAVAGE\:"'
