@@ -6,7 +6,9 @@ antigen bundle aliases
 antigen bundle aws
 antigen bundle command-not-found
 antigen bundle colored-man-pages
-antigen bundle direnv
+if command -v direnv >/dev/null 2>&1; then
+  antigen bundle direnv
+fi
 antigen bundle docker
 antigen bundle docker-compose
 antigen bundle fzf
