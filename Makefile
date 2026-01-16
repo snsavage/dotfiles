@@ -23,6 +23,7 @@ stow:
 	stow nvim
 	stow kickstart-nvim
 	stow process-compose
+	stow rectangle
 	stow ripgrep
 	stow starship
 	stow tmux
