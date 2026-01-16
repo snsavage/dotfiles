@@ -255,7 +255,7 @@
       "keyCode" : 124,
       "modifierFlags" : 786432
     },
-    "maximizeHeight" : {
+    "maximize" : {
       "keyCode" : 126,
       "modifierFlags" : 786432
     },
