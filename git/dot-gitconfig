@@ -13,8 +13,16 @@
   process = git-lfs filter-process
   required = true
 
+# Default fallback - personal config for all repos
 [include]
+  path = ~/.gitconfig_personal
+
+# Conditional includes based on repo location (these override the default)
+[includeIf "gitdir:~/grnhse/"]
   path = ~/.gitconfig_local
+
+[includeIf "gitdir:~/snsavage/"]
+  path = ~/.gitconfig_personal
 
 [init]
   defaultBranch = main
