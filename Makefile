@@ -57,9 +57,9 @@ git:
 luajit:
 	brew install luajit --HEAD
 
-.PHONY: macos
-macos:
-	./scripts/macos_config.sh
+.PHONY: defaults
+defaults:
+	./scripts/defaults_config.sh
 
 .PHONY: tmux
 tmux:
