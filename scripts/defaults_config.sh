@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# https://macos-defaults.com/finder/fxpreferredviewstyle.html
+# https://macos-defaults.com
 # ~/.macos — https://mths.be/macos
 # https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 
@@ -17,6 +17,9 @@ defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
 
 # Disable natural scrolling (reverse scroll direction)
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Set movement speed of the mouse cursor.
+defaults write NSGlobalDomain com.apple.mouse.scaling -float "2.5"
 
 ###############################################################################
 # Screenshots                                                                 #
