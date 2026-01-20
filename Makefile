@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 .PHONY: all
-all: brew fzf git link luajit macos tmux asdf-plugins
+all: brew fzf git link luajit macos tmux install-asdf
 
 .PHONY: test-config
 test-config:
@@ -65,9 +65,9 @@ defaults:
 tmux:
 	./scripts/tmux_plugin_manager_setup.sh
 
-.PHONY: asdf-plugins
-asdf-plugins:
-	cut -d ' ' -f1 tool-versions | xargs -i asdf plugin add {}
+.PHONY: install-asdf
+install-asdf:
+	command -v asdf || brew install asdf
 
 .PHONY: gobin
 gobin:
