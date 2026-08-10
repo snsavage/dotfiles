@@ -4,3 +4,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Homebrew Completions
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+# Created by `pipx` on 2026-02-06 01:35:03
+export PATH="$PATH:/Users/snsavage/.local/bin"
