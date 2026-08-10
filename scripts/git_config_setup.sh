@@ -12,7 +12,7 @@ echo -e "
 
 echo "Checking Git user configuration."
 
-LOCAL_CONFIG=~/.gitconfig_local
+LOCAL_CONFIG=~/.gitconfig_personal
 
 if [ ! -e "$LOCAL_CONFIG" ]
 then
