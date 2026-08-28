@@ -30,4 +30,3 @@ tanka		https://github.com/trotttrotttrott/asdf-tanka.git
 teleport		https://github.com/gozer/asdf-teleport.git
 terraform		https://github.com/Banno/asdf-hashicorp.git
 vault		https://github.com/asdf-community/asdf-hashicorp.git
-yj		https://github.com/ryodocx/asdf-yj.git

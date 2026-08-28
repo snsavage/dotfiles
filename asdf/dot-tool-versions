@@ -1,10 +1,15 @@
 argo 3.2.6
+argocd 2.3.3
 aws-vault 6.4.0
 awscli 2.3.6
+buildpack 0.28.0
 cfssl 1.6.0
 gcloud 369.0.0
+golang 1.25.1
 helm 3.7.0
+jq 1.6
 kind 0.11.1
+kubebuilder 3.5.0
 kubectl 1.23.1
 minikube 1.25.1
 nodejs 24.12.0
@@ -13,9 +18,3 @@ ruby 2.6.3
 sops 3.7.1
 terraform 1.1.3
 vault 1.9.2
-yj 5.0.0
-argocd 2.3.3
-jq 1.6
-buildpack 0.28.0
-kubebuilder 3.5.0
-golang 1.24.2
