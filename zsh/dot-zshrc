@@ -180,3 +180,8 @@ if command -v zoxide >/dev/null 2>&1; then
 fi
 
 autoload -Uz compinit && compinit
+
+# Source local completions (requires compinit to be initialized)
+if [ -f ~/.zshrc_local_completions ]; then
+    source ~/.zshrc_local_completions
+fi
