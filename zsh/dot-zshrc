@@ -51,7 +51,6 @@ alias vi="nvim"
 alias vim="nvim"
 alias k="kubectl"
 alias lz="lazygit"
-alias scratch="cd ~/gh/scratch"
 alias tree="tree -a"
 
 kswitch() {
