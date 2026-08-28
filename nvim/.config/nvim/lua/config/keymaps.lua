@@ -2,12 +2,16 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- Copy relative path to system clipboard
+-- Copy repo-relative path to system clipboard
 vim.keymap.set("n", "<leader>rp", function()
-  local path = vim.fn.expand("%")
-  vim.fn.setreg("+", path)
-  print("Copied relative path: " .. path)
-end, { desc = "Copy relative path to clipboard" })
+  local path = vim.fn.system("git ls-files --full-name " .. vim.fn.shellescape(vim.fn.expand("%:p"))):gsub("\n", "")
+  if path == "" then
+    print("File not tracked by git")
+  else
+    vim.fn.setreg("+", path)
+    print("Copied repo-relative path: " .. path)
+  end
+end, { desc = "Copy repo-relative path to clipboard" })
 
 -- Copy absolute path to system clipboard
 vim.keymap.set("n", "<leader>ap", function()
@@ -16,37 +20,51 @@ vim.keymap.set("n", "<leader>ap", function()
   print("Copied absolute path: " .. path)
 end, { desc = "Copy absolute path to clipboard" })
 
-vim.keymap.set("v", "<leader>gu", function()
-  -- 1. Get the remote URL and clean it up
+-- Helper function to build GitHub URLs
+local function build_github_url(start_line, end_line)
   local remote = vim.fn.system("git config --get remote.origin.url"):gsub("\n", "")
   if remote == "" then
     print("Not a git repo")
-    return
+    return nil
   end
 
-  -- Convert SSH or Git protocol to HTTPS
-  remote = remote:gsub("git@github.com:", "https://github.com/")
-  remote = remote:gsub("%.git$", "")
-
-  -- 2. Get the current branch or commit
+  remote = remote:gsub("git@github.com:", "https://github.com/"):gsub("%.git$", "")
   local branch = vim.fn.system("git rev-parse --abbrev-ref HEAD"):gsub("\n", "")
+  local file_path =
+    vim.fn.system("git ls-files --full-name " .. vim.fn.shellescape(vim.fn.expand("%:p"))):gsub("\n", "")
 
-  -- 3. Get the relative file path
-  local file_path = vim.fn.expand("%")
+  if file_path == "" then
+    print("File not tracked by git")
+    return nil
+  end
 
-  -- 4. Get visual selection line numbers
-  local start_line = vim.fn.line("v")
-  local end_line = vim.fn.line(".")
+  local url = string.format("%s/blob/%s/%s", remote, branch, file_path)
+  if start_line and end_line then
+    url = url .. string.format("#L%d-L%d", start_line, end_line)
+  end
+  return url
+end
 
-  -- Ensure lines are in order if selected bottom-to-top
+-- Copy GitHub URL for current file
+vim.keymap.set("n", "<leader>gu", function()
+  local url = build_github_url()
+  if url then
+    vim.fn.setreg("+", url)
+    print("Copied GitHub URL: " .. url)
+  end
+end, { desc = "Copy GitHub URL for current file" })
+
+-- Copy GitHub permalink for selected lines
+vim.keymap.set("v", "<leader>gu", function()
+  local start_line = vim.fn.line("'<")
+  local end_line = vim.fn.line("'>")
   if start_line > end_line then
     start_line, end_line = end_line, start_line
   end
 
-  -- 5. Construct the URL
-  local url = string.format("%s/blob/%s/%s#L%d-L%d", remote, branch, file_path, start_line, end_line)
-
-  -- 6. Copy to clipboard and notify
-  vim.fn.setreg("+", url)
-  print("Copied Permalink: " .. url)
+  local url = build_github_url(start_line, end_line)
+  if url then
+    vim.fn.setreg("+", url)
+    print("Copied GitHub permalink: " .. url)
+  end
 end, { desc = "Copy GitHub permalink for selection" })
