@@ -91,3 +91,7 @@ __debug_bin*
 
 # TMUX Plugin
 tmux/.config/tmux/plugins/*
+
+# Claude Code - local configuration files only
+.claude/*.local.*
+.claude-code/*.local.*
