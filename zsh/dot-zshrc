@@ -136,6 +136,18 @@ back_to_git_root() {
     fi
 }
 
+curl-loop() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: curl-loop <url>"
+    return 1
+  fi
+  while true; do
+    echo -n "$(date '+%H:%M:%S') - $1 - "
+    curl -sSLI --max-time 5 "$1" | head -n 1
+    sleep 1
+  done
+}
+
 # Starship.rs Setup
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
