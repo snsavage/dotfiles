@@ -1,6 +1,7 @@
 [alias]
   l = "!. ~/.githelpers && pretty_git_log"
   co = checkout
+	sync = !git fetch origin main:main && git rebase main
 
 [core]
 	editor = nvim
