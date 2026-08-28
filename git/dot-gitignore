@@ -51,8 +51,10 @@ Sessionx.vim
 # Temporary
 .netrwhist
 *~
-# Auto-generated tag files
-tags
+# Auto-generated tag files. Anchored so it only matches a `tags`
+# file at a repo root — bare `tags` also swallows directories like
+# vendor/github.com/grpc-ecosystem/go-grpc-middleware/tags/.
+/tags
 # Persistent undo
 [._]*.un~
 
