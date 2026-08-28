@@ -133,6 +133,39 @@ command = "lazygit"
 width = "90%"
 height = "90%"
 
+# vim-herdr-navigation — seamless ctrl+h/j/k/l across nvim splits and herdr
+# panes, the herdr port of vim-tmux-navigator.
+#
+# Install the plugin side with `make herdr` (pinned to a reviewed commit); the
+# nvim side is wired in nvim/.config/nvim/lua/plugins/vim-tmux-navigator.lua.
+# Without the plugin installed these bindings are inert, not broken.
+#
+# Trade-off: this shadows readline's ctrl+l (clear) and ctrl+k (kill line) in
+# non-vim panes — the same trade-off vim-tmux-navigator makes in tmux.
+[[keys.command]]
+key = "ctrl+h"
+type = "plugin_action"
+command = "vim-herdr-navigation.left"
+description = "navigate left (vim/herdr)"
+
+[[keys.command]]
+key = "ctrl+j"
+type = "plugin_action"
+command = "vim-herdr-navigation.down"
+description = "navigate down (vim/herdr)"
+
+[[keys.command]]
+key = "ctrl+k"
+type = "plugin_action"
+command = "vim-herdr-navigation.up"
+description = "navigate up (vim/herdr)"
+
+[[keys.command]]
+key = "ctrl+l"
+type = "plugin_action"
+command = "vim-herdr-navigation.right"
+description = "navigate right (vim/herdr)"
+
 # ---------------------------------------------------------------------------
 # Server
 # ---------------------------------------------------------------------------

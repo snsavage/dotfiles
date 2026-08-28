@@ -70,6 +70,16 @@ tmux:
 install-asdf:
 	command -v asdf || brew install asdf
 
+# vim-herdr-navigation: ctrl+h/j/k/l across nvim splits and herdr panes.
+# Pinned to a reviewed commit rather than a branch — `--ref` needs the full
+# 40-char SHA, an abbreviated one fails with "couldn't find remote ref".
+# Bump the SHA deliberately after reviewing the diff; the keybindings live in
+# herdr/.config/herdr/config.toml.
+.PHONY: herdr
+herdr:
+	herdr plugin install paulbkim-dev/vim-herdr-navigation \
+		--ref 79679dacc791f70fc34de8b29a3cf9706c0f5b2f -y
+
 .PHONY: gobin
 gobin:
 	mkdir -p ~/go/bin

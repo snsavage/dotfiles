@@ -2,6 +2,34 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Seamless <C-h/j/k/l> between nvim splits and the surrounding multiplexer.
+--
+-- This has to live HERE, not in the vim-tmux-navigator plugin spec. LazyVim
+-- sets its own "Go to <dir> Window" maps on the VeryLazy event, which fires
+-- after plugin config functions run — so mappings set from a spec get silently
+-- overwritten and you get a plain <C-w>h with no edge handoff. LazyVim loads
+-- this file after its own defaults, so these win.
+--
+-- The herdr half is installed by `make herdr`; its path carries a content hash,
+-- so glob rather than hardcode. Without it we fall back to plain tmux
+-- navigation, keeping a tmux-only machine working.
+local herdr_nav = vim.fn.glob(
+  vim.fn.expand("~/.config/herdr/plugins/github/vim-herdr-navigation-*/editor/nvim.lua"),
+  false,
+  true
+)[1]
+
+if herdr_nav then
+  dofile(herdr_nav)
+else
+  for key, dir in pairs({ h = "Left", j = "Down", k = "Up", l = "Right" }) do
+    vim.keymap.set("n", "<C-" .. key .. ">", "<cmd>TmuxNavigate" .. dir .. "<cr>", {
+      silent = true,
+      desc = "Navigate " .. dir:lower() .. " (vim/tmux)",
+    })
+  end
+end
+
 -- Copy repo-relative path to system clipboard
 vim.keymap.set("n", "<leader>rp", function()
   local path = vim.fn.system("git ls-files --full-name " .. vim.fn.shellescape(vim.fn.expand("%:p"))):gsub("\n", "")
