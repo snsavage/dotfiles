@@ -104,6 +104,7 @@ alias d='dirs -v'
 # asdf
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/asdf/.asdfrc"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 
 # Exports
@@ -124,6 +125,7 @@ export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 export GOBIN="${HOME}/go/bin"
 export BAT_CONFIG_PATH="${HOME}/.config/bat/bat.conf"
 export KUBE_EDITOR=vim
+export AWS_PAGER=""
 
 # https://github.com/hashicorp/terraform-provider-aws/issues/39523
 export TFENV_ARCH=arm64
@@ -216,3 +218,4 @@ autoload -Uz compinit && compinit
 if [ -f ~/.zshrc_local_completions ]; then
     source ~/.zshrc_local_completions
 fi
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
