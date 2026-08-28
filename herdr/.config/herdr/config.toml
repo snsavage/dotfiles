@@ -1,0 +1,231 @@
+# herdr configuration
+#
+# Managed by ~/dotfiles — stow package: herdr
+# Docs:            https://herdr.dev/docs/configuration/
+# Full defaults:   herdr --default-config
+# Reload in place: herdr server reload-config   (or prefix+shift+r)
+#
+# Keybindings below mirror ~/dotfiles/tmux/dot-tmux.conf wherever herdr has an
+# equivalent, so tmux muscle memory carries over. Divergences are commented.
+
+# Onboarding already completed — keep the first-run prompt off.
+onboarding = false
+
+# ---------------------------------------------------------------------------
+# Theme
+# ---------------------------------------------------------------------------
+[theme]
+# Matches the TokyoNight palette in alacritty/.config/alacritty.toml.
+name = "tokyo-night"
+auto_switch = false
+
+# Built-ins: catppuccin, terminal, tokyo-night, dracula, nord, gruvbox,
+#            one-dark, solarized, kanagawa, rose-pine, vesper
+# dark_name  = "tokyo-night"
+# light_name = "catppuccin-latte"
+
+# Override individual color tokens on top of the base theme.
+# Accepts hex (#rrggbb), named colors, rgb(r,g,b), or panel_bg = "reset".
+# [theme.custom]
+# accent = "#7aa2f7"   # TokyoNight blue
+
+# ---------------------------------------------------------------------------
+# Terminal
+# ---------------------------------------------------------------------------
+[terminal]
+# Empty means $SHELL, then /bin/sh. Alacritty already launches /bin/zsh --login.
+# default_shell = ""
+
+# "auto" uses login shells on macOS.
+# shell_mode = "auto"
+
+# "follow" inherits cwd from the source pane — same effect as tmux's
+# split-window -c '#{pane_current_path}' (dot-tmux.conf:28-29,38).
+# new_cwd = "follow"
+
+# ---------------------------------------------------------------------------
+# Updates
+# ---------------------------------------------------------------------------
+[update]
+# channel        = "stable"
+# version_check  = true
+# manifest_check = true
+
+# ---------------------------------------------------------------------------
+# Keys
+# ---------------------------------------------------------------------------
+[keys]
+# tmux: set -g prefix C-s   (dot-tmux.conf:3)
+prefix = "ctrl+s"
+
+# Split naming is INVERTED relative to tmux:
+#   herdr split_horizontal == tmux split-window -v  (new pane below)
+#   herdr split_vertical   == tmux split-window -h  (new pane beside)
+# tmux: bind-key -  split-window -v   (dot-tmux.conf:28)
+split_horizontal = "prefix+minus"
+# tmux: bind-key \  split-window -h   (dot-tmux.conf:29)
+split_vertical = "prefix+backslash"
+
+# Direct resize, no mode to enter — mirrors tmux's repeatable
+# bind -r H/J/K/L resize-pane (dot-tmux.conf:32-35).
+resize_pane_left  = "prefix+shift+h"
+resize_pane_down  = "prefix+shift+j"
+resize_pane_up    = "prefix+shift+k"
+resize_pane_right = "prefix+shift+l"
+
+# Navigate-mode workspace movement, remapped off the arrow keys.
+#
+# UPSTREAM BUG: https://github.com/herdrdev/herdr/issues/3328
+# In navigate mode (prefix+w) the documented arrow bindings are silently
+# ignored on macOS + Alacritty + TERM=xterm-256color. Open as of 2026-08-28,
+# reproduced here on herdr 0.8.2 / Alacritty 0.16.1 (the issue title says
+# 0.17, but 0.16.1 is affected too). `herdr config check` passes and
+# reload-config succeeds — the binding is accepted and then does nothing.
+# The issue confirms two workarounds: remap to j/k, or select by number.
+#
+# Revisit when #3328 closes; the arrow bindings are the documented default.
+# Prior regressions of the same behavior: #601 (fixed Jun 2026), #1148, #1149.
+#
+# Trade-off: this takes j/k from navigate_pane_up/down. Use Tab to cycle
+# panes instead; left/right arrows still focus panes (hardwired in herdr).
+navigate_workspace_up   = "k"
+navigate_workspace_down = "j"
+
+# Workspace switching. herdr ships previous/next/switch_workspace all UNBOUND,
+# which leaves navigate mode (prefix+w) as the only route between workspaces —
+# and its up/down arrows do not work (herdr 0.8.2, reproduced with a stock
+# [keys] section, so not a config problem). These give a direct route.
+# Plain punctuation, no modifier: shift+digit does NOT transmit as a key event
+# (terminals send "@" for shift+2), so switch_workspace = "prefix+shift+1..9"
+# is deliberately omitted. "prefix+[" must be the literal bracket —
+# "prefix+bracketleft" is rejected by `herdr config check`.
+previous_workspace = "prefix+["
+next_workspace     = "prefix+]"
+
+# DIVERGENCE: tmux binds prefix+r to "reload config" (dot-tmux.conf:7).
+# In herdr prefix+r enters resize mode and reload is prefix+shift+r.
+# Left at herdr defaults; swap these two if the muscle memory grates.
+# resize_mode   = "prefix+r"
+# reload_config = "prefix+shift+r"
+
+# These herdr defaults already match tmux and are listed for reference only:
+# new_tab          = "prefix+c"      # tmux: bind c new-window
+# previous_tab     = "prefix+p"      # tmux: bind p
+# next_tab         = "prefix+n"      # tmux: bind n
+# switch_tab       = "prefix+1..9"   # tmux: prefix+<n>
+# focus_pane_left  = "prefix+h"
+# focus_pane_down  = "prefix+j"
+# focus_pane_up    = "prefix+k"
+# focus_pane_right = "prefix+l"
+# zoom             = "prefix+z"      # tmux: prefix+z
+# close_pane       = "prefix+x"
+# detach           = "prefix+q"      # tmux: prefix+d
+# toggle_sidebar   = "prefix+b"
+# help             = "prefix+?"
+# goto             = "prefix+g"      # NOTE: why the lazygit popup below uses alt+g
+
+# lazygit in a modal popup. The repo already stows a lazygit package.
+# alt+ chords reach herdr because alacritty.toml:68 sets option_as_alt = "Both".
+[[keys.command]]
+key = "prefix+alt+g"
+type = "popup"
+command = "lazygit"
+width = "90%"
+height = "90%"
+
+# ---------------------------------------------------------------------------
+# Server
+# ---------------------------------------------------------------------------
+[server]
+# Size of the virtual terminal used when no client is attached.
+# headless_cols = 120
+# headless_rows = 40
+
+# ---------------------------------------------------------------------------
+# Worktrees
+# ---------------------------------------------------------------------------
+# [worktrees]
+# directory = "~/.herdr/worktrees"
+
+# ---------------------------------------------------------------------------
+# UI
+# ---------------------------------------------------------------------------
+[ui]
+# mouse_capture and copy_on_select both default to true, which already matches
+# tmux `set -g mouse on` (dot-tmux.conf:9) and alacritty
+# `save_to_clipboard = true` (alacritty.toml:60). Left at defaults.
+# mouse_capture   = true
+# copy_on_select  = true
+
+# sidebar_width           = 26
+# sidebar_start_collapsed = false
+# sidebar_collapsed_mode  = "compact"
+
+# confirm_close = true
+
+# tmux creates windows immediately and auto-renames them from the cwd
+# (dot-tmux.conf:42-43). Set this false for the same feel.
+# prompt_new_tab_name = true
+
+# tab_bar_position = "top"
+
+# Written to the outer terminal title. Tokens: {hostname} {workspace} {tab}
+# {pane} {terminal_title}.
+# window_title = "{hostname}: {workspace}"
+
+# agent_panel_sort   = "spaces"
+# status_indicators  = "dots"
+# accent             = "cyan"
+
+# Sidebar row layouts — see `herdr --default-config` for the token list.
+# [ui.sidebar.agents]
+# rows = [["state_icon", "workspace", "tab"], ["agent"]]
+# [ui.sidebar.spaces]
+# rows = [["state_icon", "workspace"], ["branch", "git_status"]]
+
+[ui.toast]
+# Alacritty does not implement OSC 777, so delivery = "terminal" would silently
+# no-op. "system" has herdr ask the macOS notification service directly.
+delivery = "system"
+# delay_seconds = 1
+
+[ui.sound]
+# Audio cue when an agent changes state in a background workspace.
+enabled = true
+# path         = "sounds/notification.mp3"   # relative to this file
+# done_path    = "sounds/done.mp3"
+# request_path = "sounds/request.mp3"
+# [ui.sound.agents]
+# droid = "off"   # muted by default
+
+# ---------------------------------------------------------------------------
+# Session
+# ---------------------------------------------------------------------------
+[session]
+# Resume AI-agent panes into their native conversations after a server restart.
+# resume_agents_on_restore = true
+
+# ---------------------------------------------------------------------------
+# Remote
+# ---------------------------------------------------------------------------
+[remote]
+# Let herdr manage the ssh config used by `herdr --remote` (adds keepalives
+# and connection multiplexing on top of ~/.ssh/config).
+# manage_ssh_config = true
+
+# ---------------------------------------------------------------------------
+# Experimental
+# ---------------------------------------------------------------------------
+[experimental]
+# allow_nested   = false   # launching herdr inside a herdr pane
+# kitty_graphics = false   # requires a Kitty-graphics-capable outer terminal
+# pane_history   = false   # persist pane scrollback across server restarts
+
+# ---------------------------------------------------------------------------
+# Advanced
+# ---------------------------------------------------------------------------
+[advanced]
+# Scrollback retained per pane, in BYTES (not lines — tmux's history-limit
+# 50000 at dot-tmux.conf:18 is a line count). 50k lines is roughly 5 MB, so
+# the 10 MB default already exceeds the tmux setup.
+# scrollback_limit_bytes = 10000000

@@ -19,6 +19,7 @@ stow:
 	stow editorconfig
 	stow gh
 	stow git
+	stow herdr
 	stow lazygit
 	stow nvim
 	stow kickstart-nvim
