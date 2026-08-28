@@ -5,3 +5,6 @@
 local opt = vim.opt
 opt.conceallevel = 0
 opt.relativenumber = false
+
+-- Remove LSP from root detection, only use git root
+vim.g.root_spec = { ".git", "cwd" }
