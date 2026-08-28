@@ -53,6 +53,7 @@ alias vim="nvim"
 alias k="kubectl"
 alias lz="lazygit"
 alias tree="tree -a"
+alias pq="pbpaste | jq ."
 
 kswitch() {
   if [ $# -eq 2 ]; then
