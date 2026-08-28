@@ -28,7 +28,8 @@ ensure_tmux_is_running() {
   fi
 }
 
-ensure_tmux_is_running
+# Uncomment to auto-attach a tmux session on shell start (see scripts/tat.sh)
+# ensure_tmux_is_running
 
 # XDG Config
 export XDG_CONFIG_HOME="${HOME}/.config"
